@@ -1,0 +1,22 @@
+{
+  "name": "xapi-to-ktbs",
+  "version": "0.0.1",
+  "description": "xapi to ktbs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/rcazenaveleveque/xapi-to-ktbs.git"
+  },
+  "keywords": [
+    "xapi",
+    "tincan",
+    "ktbs",
+    "traces"
+  ],
+  "author": "Raphaël Cazenave-Lévêque",
+  "license": "WTFPL",
+  "homepage": "https://bitbucket.org/rcazenaveleveque/xapi-to-ktbs#readme"
+}
