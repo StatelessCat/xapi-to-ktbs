@@ -1,22 +1,12 @@
 const fs = require('fs');
 const ktbs = require('./ktbs');
 
-fs.readFile('./resources/tincan2prov/evaluation-1-jsonld.jsonld', (err, data) => {
-  if (err) { throw err; }
-  const statement1 = JSON.parse(data);
-  // console.log(statement1);
-  // console.log('statement1 readed.');
-});
+const EVAL_1_JSONLD_PATH =
+      './resources/tincan2prov/evaluation-1-jsonld.jsonld';
+const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
 
-const model =
-      '@prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .' + '\n' +
-      '@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .' + '\n' +
-      '<.> :contains <m1> .' + '\n' +
-      '<m1> a :TraceModel .' + '\n' +
-      '<#xapiStatement> a :ObselType .' + '\n' +
-      '<http://semweb.mmlab.be/ns/tincan2prov/version> a :AttributeType ;' + '\n' +
-      '    :hasAttributeDomain <#xapiStatement> ;' + '\n' +
-      '    :hasAttributeRange xsd:string .' + '\n';
+const s1 = fs.readFileSync(EVAL_1_JSONLD_PATH, 'utf8');
+const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
 
 ktbs.deleteX({
   path: '/base1/m1',

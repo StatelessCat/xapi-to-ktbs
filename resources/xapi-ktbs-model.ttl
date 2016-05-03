@@ -1,0 +1,9 @@
+@prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+<.> :contains <m1> .
+<m1> a :TraceModel .
+<#xapiStatement> a :ObselType .
+<http://semweb.mmlab.be/ns/tincan2prov/version> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> ;
+  :hasAttributeRange xsd:string .
+
