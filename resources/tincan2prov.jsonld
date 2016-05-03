@@ -1,0 +1,442 @@
+{
+  "@context" : {
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "api-activities" : "http://www.adlnet.gov/expapi/activities/",
+    "api-verbs" : "http://www.adlnet.gov/expapi/verbs/",
+    "@language" : "en",
+    "statement" : "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+    "objectType" : "@type",
+    "success" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/success",
+      "@type" : "xsd:boolean"
+    },
+    "extensions" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/extensions"
+    },
+    "SubStatement" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/SubStatement",
+      "@type" : "@id"
+    },
+    "object" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/object",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Object",
+      "id" : "@id"
+    },
+    "Attachment" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Attachment",
+      "@type" : "@id"
+    },
+    "member" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/member"
+    },
+    "min" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/min",
+      "@type" : "xsd:integer"
+    },
+    "authority" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/authority",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Actor"
+    },
+    "media" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/media"
+    },
+    "commented" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/commented"
+    },
+    "IdentifiedGroup" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/IdentifiedGroup"
+    },
+    "interaction" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/interaction"
+    },
+    "steps" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/steps",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/InteractionComponent"
+    },
+    "terminated" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/terminated"
+    },
+    "mastered" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/mastered"
+    },
+    "grouping" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/grouping",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    },
+    "fileUrl" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/fileUrl",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "scale" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/scale",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/InteractionComponent"
+    },
+    "Object" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Object"
+    },
+    "interactionType" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/interactionType",
+      "@type" : "xsd:string"
+    },
+    "Context" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Context"
+    },
+    "failed" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/failed"
+    },
+    "shared" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/shared"
+    },
+    "Statement" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "experienced" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/experienced"
+    },
+    "StatementRef" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/StatementRef"
+    },
+    "key" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/key",
+      "@type" : "rdfs:Literal"
+    },
+    "parent" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/parent",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    },
+    "mbox" : {
+      "@id" : "http://xmlns.com/foaf/0.1/mbox"
+    },
+    "Result" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Result"
+    },
+    "max" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/max",
+      "@type" : "xsd:integer"
+    },
+    "verb" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/verb",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Verb"
+    },
+    "sha2" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/sha2",
+      "@type" : "xsd:string"
+    },
+    "profile" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/profile"
+    },
+    "Activity" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    },
+    "id" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/id",
+      "@type" : "xsd:string"
+    },
+    "completed" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/completed"
+    },
+    "timestamp" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/timestamp",
+      "@type" : "xsd:dateTime"
+    },
+    "homePage" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/homePage",
+      "@type" : "foaf:Document"
+    },
+    "attended" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/attended"
+    },
+    "revision" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/revision",
+      "@type" : "rdfs:Literal"
+    },
+    "Score" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Score"
+    },
+    "mbox_sha1sum" : {
+      "@id" : "http://xmlns.com/foaf/0.1/mbox_sha1sum"
+    },
+    "Actor" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Actor"
+    },
+    "ContextActivitiesObject" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/ContextActivitiesObject"
+    },
+    "attempted" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/attempted"
+    },
+    "initialized" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/initialized"
+    },
+    "Agent" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    },
+    "launched" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/launched"
+    },
+    "name" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/name",
+      "@container" : "@language"
+    },
+    "score" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/score",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Score"
+    },
+    "value" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/value",
+      "@type" : "xsd:string"
+    },
+    "contextActivities" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/contextActivities",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/ContextActivitiesObject"
+    },
+    "instructor" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/instructor",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Actor"
+    },
+    "resumed" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/resumed"
+    },
+    "context" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/context",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Context"
+    },
+    "module" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/module"
+    },
+    "InteractionComponent" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/InteractionComponent"
+    },
+    "Account" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Account"
+    },
+    "question" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/question"
+    },
+    "interacted" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/interacted"
+    },
+    "statement" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/statement",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/StatementRef"
+    },
+    "objective" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/objective"
+    },
+    "account" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/account",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Account"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "length" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/length",
+      "@type" : "rdfs:Literal"
+    },
+    "definition" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/definition",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/ActivityDefinition"
+    },
+    "moreinfo" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/moreinfo",
+      "@type" : "rdfs:Resource"
+    },
+    "asked" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/asked"
+    },
+    "preferred" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/preferred"
+    },
+    "attempt" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/attempt"
+    },
+    "duration" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/duration",
+      "@type" : "xsd:duration"
+    },
+    "link" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/link"
+    },
+    "registration" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/registration",
+      "@type" : "rdfs:Literal"
+    },
+    "choices" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/choices",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/InteractionComponent"
+    },
+    "source" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/source",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/InteractionComponent"
+    },
+    "usageType" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/usageType",
+      "@type" : "rdfs:Resource"
+    },
+    "type" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/type",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    },
+    "assessment" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/assessment"
+    },
+    "AnonymousGroup" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/AnonymousGroup"
+    },
+    "Verb" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Verb"
+    },
+    "version" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/version",
+      "@type" : "xsd:string"
+    },
+    "voided" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/voided"
+    },
+    "responded" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/responded"
+    },
+    "other" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/other",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    },
+    "target" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/target",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/InteractionComponent"
+    },
+    "stored" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/stored",
+      "@type" : "xsd:dateTime"
+    },
+    "completion" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/completion",
+      "@type" : "xsd:boolean"
+    },
+    "answered" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/answered"
+    },
+    "display" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/display",
+      "@container" : "@language"
+    },
+    "contentType" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/contentType",
+      "@type" : "xsd:string"
+    },
+    "response" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/response",
+      "@type" : "rdfs:Literal"
+    },
+    "file" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/file"
+    },
+    "scaled" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/scaled",
+      "@type" : "xsd:decimal"
+    },
+    "Resource" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "lesson" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/lesson"
+    },
+    "Extension" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Extension"
+    },
+    "category" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/category",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    },
+    "openid" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/openid",
+      "@type" : "rdfs:Resource"
+    },
+    "registered" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/registered"
+    },
+    "ActivityDefinition" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/ActivityDefinition"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "progressed" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/progressed"
+    },
+    "team" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/team",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Group"
+    },
+    "Document" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Document"
+    },
+    "simulation" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/simulation"
+    },
+    "performance" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/performance"
+    },
+    "raw" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/raw",
+      "@type" : "xsd:integer"
+    },
+    "language" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/language",
+      "@type" : "xsd:string"
+    },
+    "Group" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/Group"
+    },
+    "exited" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/exited"
+    },
+    "course" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/course"
+    },
+    "correctResponsesPattern" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/correctResponsesPattern",
+      "@type" : "xsd:string"
+    },
+    "platform" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/platform",
+      "@type" : "rdfs:Literal"
+    },
+    "attachments" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/attachments",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Attachment"
+    },
+    "actor" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/actor",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Actor"
+    },
+    "meeting" : {
+      "@id" : "http://www.adlnet.gov/expapi/activities/meeting"
+    },
+    "description" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/description",
+      "@container" : "@language"
+    },
+    "passed" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/passed"
+    },
+    "result" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/result",
+      "@type" : "http://semweb.mmlab.be/ns/tincan2prov/Result"
+    },
+    "LanguageMap" : {
+      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/LanguageMap"
+    },
+    "suspended" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/suspended"
+    },
+    "imported" : {
+      "@id" : "http://www.adlnet.gov/expapi/verbs/imported"
+    }
+  }
+}
