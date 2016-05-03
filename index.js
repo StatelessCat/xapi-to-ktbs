@@ -1,7 +1,7 @@
 const fs = require('fs');
 const ktbs = require('./ktbs');
 
-fs.readFile('./resources/evaluation-1-jsonld.jsonld', (err, data) => {
+fs.readFile('./resources/tincan2prov/evaluation-1-jsonld.jsonld', (err, data) => {
   if (err) { throw err; }
   const statement1 = JSON.parse(data);
   // console.log(statement1);
