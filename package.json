@@ -18,5 +18,9 @@
   ],
   "author": "Raphaël Cazenave-Lévêque",
   "license": "WTFPL",
-  "homepage": "https://bitbucket.org/rcazenaveleveque/xapi-to-ktbs#readme"
+  "homepage": "https://bitbucket.org/rcazenaveleveque/xapi-to-ktbs#readme",
+  "dependencies": {
+    "jsonld": "^0.4.11",
+    "n3": "^0.4.5"
+  }
 }

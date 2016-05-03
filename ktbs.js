@@ -84,8 +84,13 @@ var postTrace = function(opt) {
   postX(opt);
 };
 
+var postObsel = function(opt) {
+  postX(opt);
+};
+
 exports.deleteX = deleteX;
 exports.postBase = postBase;
 exports.postModel = postModel;
 exports.postTrace = postTrace;
+exports.postObsel = postObsel;
 
