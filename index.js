@@ -8,14 +8,27 @@ fs.readFile('./resources/evaluation-1-jsonld.jsonld', (err, data) => {
   // console.log('statement1 readed.');
 });
 
+const model =
+      '@prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .' + '\n' +
+      '<.> :contains <m1> .' + '\n' +
+      '<m1> a :TraceModel .' + '\n';
+
+ktbs.deleteX({
+  path: '/base1/m1',
+});
 ktbs.deleteX({
   path: '/base1/t1/',
 });
 ktbs.deleteX({
-  path: '/base42/',
+  path: '/base1/',
 });
 ktbs.postBase({
-  basename: 'base42/',
+  basename: 'base1/',
+});
+ktbs.postModel({
+  path: '/base1/',
+  headers: {'Content-Type': 'text/turtle'},
+  payload: model,
 });
 ktbs.postTrace({
   basepath: '/base1/',

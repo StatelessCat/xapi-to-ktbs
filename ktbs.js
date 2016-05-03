@@ -26,15 +26,18 @@ var deleteX = function(opt) {
 };
 
 var postX = function(opt) {
-  const payload = opt.payload || {};
+  const payload = opt.payload || '';
   const path = opt.path || '';
+  opt.headers = opt.headers || {};
+  opt.headers['Content-Type'] = opt.headers['Content-Type'] ||
+    'application/json';
   const options = {
     hostname: 'localhost',
     port: 8001,
     path: path,
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': opt.headers['Content-Type'],
       'Content-Length': payload.length,
     },
   };
@@ -59,7 +62,13 @@ var postBase = function(opt) {
     '@type': 'Base',
     label: 'My new base',
   });
-  postX({payload: data, path: ''});
+  opt.payload = data;
+  opt.path = '';
+  postX(opt);
+};
+
+var postModel = function(opt) {
+  postX(opt);
 };
 
 var postTrace = function(opt) {
@@ -75,5 +84,6 @@ var postTrace = function(opt) {
 
 exports.deleteX = deleteX;
 exports.postBase = postBase;
+exports.postModel = postModel;
 exports.postTrace = postTrace;
 
