@@ -10,8 +10,13 @@ fs.readFile('./resources/evaluation-1-jsonld.jsonld', (err, data) => {
 
 const model =
       '@prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .' + '\n' +
+      '@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .' + '\n' +
       '<.> :contains <m1> .' + '\n' +
-      '<m1> a :TraceModel .' + '\n';
+      '<m1> a :TraceModel .' + '\n' +
+      '<#xapiStatement> a :ObselType .' + '\n' +
+      '<http://semweb.mmlab.be/ns/tincan2prov/version> a :AttributeType ;' + '\n' +
+      '    :hasAttributeDomain <#xapiStatement> ;' + '\n' +
+      '    :hasAttributeRange xsd:string .' + '\n';
 
 ktbs.deleteX({
   path: '/base1/m1',
