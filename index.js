@@ -38,5 +38,6 @@ ktbs.postModel({
 ktbs.postTrace({
   basepath: '/base1/',
   tracename: 't1/',
+  hasModel: '/base1/m1',
 });
 

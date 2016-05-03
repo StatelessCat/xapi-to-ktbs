@@ -73,10 +73,12 @@ var postModel = function(opt) {
 
 var postTrace = function(opt) {
   opt.path = opt.basepath || '/base1/';
+  opt.hasModel =
+    opt.hasModel || 'http://liris.cnrs.fr/silex/2011/simple-trace-model/';
   opt.payload = JSON.stringify({
     '@id': opt.tracename,
     '@type': 'StoredTrace',
-    hasModel: 'http://liris.cnrs.fr/silex/2011/simple-trace-model/',
+    hasModel: opt.hasModel,
     origin: '1970-01-01T00:00:00Z',
   });
   postX(opt);
