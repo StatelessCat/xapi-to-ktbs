@@ -8,6 +8,8 @@ fs.readFile('./resources/evaluation-1-jsonld.jsonld', (err, data) => {
   // console.log('statement1 readed.');
 });
 
+// ktbs.deleteTrace();
 ktbs.deleteBase();
 ktbs.postBase();
+ktbs.postTrace();
 

@@ -25,20 +25,17 @@ var deleteBase = function() {
   deleteBaseReq.end();
 };
 
-var postBase = function() {
-  const postData = JSON.stringify({
-    '@id': 'base1/',
-    '@type': 'Base',
-    label: 'My new base',
-  });
+var postX = function(opt) {
+  const payload = opt.payload || {};
+  const path = opt.path || '';
   const options = {
     hostname: 'localhost',
     port: 8001,
-    path: '',
+    path: path,
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Content-Length': postData.length,
+      'Content-Length': payload.length,
     },
   };
   const req = http.request(options, (res) => {
@@ -48,17 +45,34 @@ var postBase = function() {
     res.on('data', (chunk) => {
       console.log(`BODY: ${chunk}`);
     });
-    res.on('end', () => {
-      console.log(`${HOSTNAME}:${PORT}${BASENAME} created`);
-    });
   });
   req.on('error', (e) => {
     console.log(`problem with request: ${e.message}`);
   });
-  req.write(postData);
+  req.write(payload);
   req.end();
+};
+
+var postBase = function() {
+  const data = JSON.stringify({
+    '@id': 'base1/',
+    '@type': 'Base',
+    label: 'My new base',
+  });
+  postX({payload: data, path: ''});
+};
+
+var postTrace = function() {
+  const data = JSON.stringify({
+    '@id': 't01/',
+    '@type': 'StoredTrace',
+    hasModel: 'http://liris.cnrs.fr/silex/2011/simple-trace-model/',
+    origin: '1970-01-01T00:00:00Z',
+  });
+  postX({payload: data, path: '/base1/'});
 };
 
 exports.deleteBase = deleteBase;
 exports.postBase = postBase;
+exports.postTrace = postTrace;
 
