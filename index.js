@@ -11,22 +11,23 @@ const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
 
 const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
 
-var ss1 = JSON.parse(s1);
+const ss1 = JSON.parse(s1);
 
-var ss2 = {
-  "@id": ss1.id,
-  "@type": ["m:xapiStatement", ss1["@type"]],
-  "hasTrace": "./",
-  "@context": [
-    ss1["@context"],
-    { "m": "http://localhost:8001/base1/m1#" },
-    "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context"
-  ]
-};
+var ss2 = ss1;
+ss1["@id"] = ss1.id;
+ss1["@type"] = ["m:xapiStatement", ss1["@type"]];
+ss1["hasTrace"] = "./";
+ss1["@context"] = [
+  "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
+  ss1["@context"],
+  { "m": "http://localhost:8001/base1/m1#" }
+];
+// Note the order of @context declarations
+//  ktbs context must be specified before the tincan2prov one
+
 console.log('==ss2=raw==');
 console.log(JSON.stringify(ss2, null, 2));
 console.log('===========');
-
 
 ktbs.deleteX({
   path: '/base1/m1'
