@@ -2,6 +2,9 @@
 const fs = require('fs');
 const ktbs = require('./ktbs');
 
+const EVAL_1_JSONLD_PATH =
+      './resources/jsonld-obsel.jsonld';
+const s1 = fs.readFileSync(EVAL_1_JSONLD_PATH, 'utf8');
 const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
 
 const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
@@ -28,9 +31,12 @@ ktbs.postTrace({
   tracename: 't1/',
   hasModel: '/base1/m1'
 });
-//ktbs.postObsel({
-//  path: '/base1/t1/',
-//  payload: s1,
-//  headers: {'Content-Type': 'application/ld+json'}
-//});
+console.log('====');
+console.log(s1);
+console.log('====');
+ktbs.postObsel({
+  path: '/base1/t1/',
+  payload: s1,
+  headers: {'Content-Type': 'application/ld+json'}
+});
 

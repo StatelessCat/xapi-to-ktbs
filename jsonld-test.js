@@ -4,7 +4,7 @@ const jsonld = require('jsonld');
 const N3 = require('n3');
 
 const EVAL_1_JSONLD_PATH =
-      './resources/tincan2prov/evaluation-1-jsonld.jsonld';
+      './resources/tincan2prov/evaluation-1-jsonld.jsonld.simple';
 const s1 = fs.readFileSync(EVAL_1_JSONLD_PATH, 'utf8');
 
 jsonld.normalize(JSON.parse(s1), {
