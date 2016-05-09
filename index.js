@@ -13,11 +13,11 @@ const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
 
 const ss1 = JSON.parse(s1);
 
-var ss2 = ss1;
-ss1["@id"] = ss1.id;
-ss1["@type"] = ["m:xapiStatement", ss1["@type"]];
-ss1["hasTrace"] = "./";
-ss1["@context"] = [
+var ss2 = JSON.parse(JSON.stringify(ss1)); // TODO fix quick/dirty cloning
+ss2["@id"] = ss1.id;
+ss2["@type"] = ["m:xapiStatement", ss1["@type"]];
+ss2["hasTrace"] = "./";
+ss2["@context"] = [
   "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
   ss1["@context"],
   { "m": "http://localhost:8001/base1/m1#" }
