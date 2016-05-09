@@ -20,7 +20,8 @@
   "license": "WTFPL",
   "homepage": "https://bitbucket.org/rcazenaveleveque/xapi-to-ktbs#readme",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "jsonld": "^0.4.11",
-    "n3": "^0.4.5"
+    "n3": "^0.4.5",
   }
 }

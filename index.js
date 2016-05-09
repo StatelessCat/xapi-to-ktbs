@@ -16,6 +16,7 @@ const ss1 = JSON.parse(s1);
 var ss2 = JSON.parse(JSON.stringify(ss1)); // TODO fix quick/dirty cloning
 ss2["@id"] = ss1.id;
 ss2["@type"] = ["m:xapiStatement", ss1["@type"]];
+// ^ TODO handle the case of ss1["@type"] is an array
 ss2["hasTrace"] = "./";
 ss2["@context"] = [
   "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
