@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const http = require('http');
 
 const HOSTNAME = 'localhost';
@@ -9,7 +10,7 @@ var deleteX = function(opt) {
     hostname: HOSTNAME,
     port: PORT,
     path: path,
-    method: 'DELETE',
+    method: 'DELETE'
   };
   const deleteReq = http.request(deleteBaseOptions, (res) => {
     console.log(`STATUS: ${res.statusCode}`);
@@ -38,8 +39,8 @@ var postX = function(opt) {
     method: 'POST',
     headers: {
       'Content-Type': opt.headers['Content-Type'],
-      'Content-Length': payload.length,
-    },
+      'Content-Length': payload.length
+    }
   };
   const req = http.request(options, (res) => {
     console.log(`STATUS: ${res.statusCode}`);
@@ -60,7 +61,7 @@ var postBase = function(opt) {
   const data = JSON.stringify({
     '@id': opt.basename,
     '@type': 'Base',
-    label: 'My new base',
+    label: 'My new base'
   });
   opt.payload = data;
   opt.path = '';
@@ -79,7 +80,7 @@ var postTrace = function(opt) {
     '@id': opt.tracename,
     '@type': 'StoredTrace',
     hasModel: opt.hasModel,
-    origin: '1970-01-01T00:00:00Z',
+    origin: '1970-01-01T00:00:00Z'
   });
   postX(opt);
 };
