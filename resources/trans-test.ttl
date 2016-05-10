@@ -1,0 +1,24 @@
+@prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .
+@prefix ns1: <http://semweb.mmlab.be/ns/tincan2prov/> .
+
+<> :contains <joinRelated1/> .
+
+<joinRelated1/>
+    a :ComputedTrace ;
+    :hasMethod :sparql ;
+    :hasSource <t1/> ;
+    :hasParameter """sparql=
+PREFIX : <http://liris.cnrs.fr/silex/2009/ktbs#>
+PREFIX m:  <http://liris.cnrs.fr/silex/2011/simple-trace-model/>
+
+CONSTRUCT {
+    [ a m:SimpleObsel ;
+      :hasTrace <%(__destination__)s> ;
+      :hasBegin ?timestamp ;
+      :hasEnd ?timestamp ;
+      :hasSourceObsel ?s1 ;
+    ] .
+} WHERE {
+    ?s1 a <http://localhost:8001/b1/m1#xapiStatement> .
+}""" .
+

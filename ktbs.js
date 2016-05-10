@@ -73,13 +73,13 @@ var postModel = function(opt) {
 };
 
 var postTrace = function(opt) {
-  opt.path = opt.basepath || '/base1/';
-  opt.hasModel =
+  opt.path = opt.basepath || '/b1/';
+  const hasModel =
     opt.hasModel || 'http://liris.cnrs.fr/silex/2011/simple-trace-model/';
   opt.payload = JSON.stringify({
     '@id': opt.tracename,
     '@type': 'StoredTrace',
-    hasModel: opt.hasModel,
+    hasModel: hasModel,
     origin: '1970-01-01T00:00:00Z'
   });
   postX(opt);
@@ -89,9 +89,17 @@ var postObsel = function(opt) {
   postX(opt);
 };
 
+var postComputedTrace = function(opt) {
+  opt.path = '/b1/';
+  opt.headers = opt.headers || {};
+  opt.headers['Content-Type'] = 'application/turtle';
+  postX(opt);
+};
+
 exports.deleteX = deleteX;
 exports.postBase = postBase;
 exports.postModel = postModel;
 exports.postTrace = postTrace;
 exports.postObsel = postObsel;
+exports.postComputedTrace = postComputedTrace;
 

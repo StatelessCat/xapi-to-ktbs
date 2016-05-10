@@ -4,34 +4,44 @@ const ktbs = require('./ktbs');
 const evparser = require('./evparser');
 
 const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
+// const SPARQL_TRANS_PATH = './resources/trans.rq'; // TODO use me
+const SPARQL_TRANS_PATH_TEST = './resources/trans-test.ttl';
 
 const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
+// const rq = fs.readFileSync(SPARQL_TRANS_PATH, 'utf8'); // TODO use me
+const trans_test = fs.readFileSync(SPARQL_TRANS_PATH_TEST, 'utf8');
 
 const statements = evparser.statements;
+const fus_statement = evparser.fusionned;
 
 ktbs.deleteX({
-  path: '/base1/m1'
+  path: '/b1/joinRelated1/'
 });
 ktbs.deleteX({
-  path: '/base1/t1/'
+  path: '/b1/m1'
 });
 ktbs.deleteX({
-  path: '/base1/'
+  path: '/b1/t1/'
+});
+ktbs.deleteX({
+  path: '/b1/'
 });
 ktbs.postBase({
-  basename: 'base1/'
+  basename: 'b1/'
 });
 ktbs.postModel({
-  path: '/base1/',
+  path: '/b1/',
   headers: {'Content-Type': 'text/turtle'},
   payload: model
 });
 ktbs.postTrace({
-  basepath: '/base1/',
+  basepath: '/b1/',
   tracename: 't1/',
-  hasModel: '/base1/m1'
+  hasModel: '/b1/m1'
 });
 
+fus_statement.id = 'abc1234'; // Avoid id collisions
+statements.push(fus_statement); // Add the "fusionned" statement
 statements.filter(function(st) {
   return st['id'] !== 'f590683e-c87e-4b0c-96d9-d5f7c312a4b2' &&
     st['id'] !== '935e030d-1af6-4415-9106-864f2d682ffa' ;
@@ -47,14 +57,18 @@ statements.filter(function(st) {
   ss2["@context"] = [
     "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
     ss1["@context"],
-    { "m": "http://localhost:8001/base1/m1#" }
+    { "m": "http://localhost:8001/b1/m1#" }
   ];
   // Note the order of @context declarations
   //  ktbs context must be specified before the tincan2prov one
   ktbs.postObsel({
-    path: '/base1/t1/',
+    path: '/b1/t1/',
     payload: JSON.stringify(ss2),
     headers: {'Content-Type': 'application/ld+json'}
   });
+});
+
+ktbs.postComputedTrace({
+  payload: trans_test
 });
 
