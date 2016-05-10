@@ -1,5 +1,4 @@
 @prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .
-@prefix ns1: <http://semweb.mmlab.be/ns/tincan2prov/> .
 
 <> :contains <joinRelated1/> .
 
@@ -14,8 +13,6 @@ PREFIX m:  <http://liris.cnrs.fr/silex/2011/simple-trace-model/>
 CONSTRUCT {
     [ a m:SimpleObsel ;
       :hasTrace <%(__destination__)s> ;
-      :hasBegin ?timestamp ;
-      :hasEnd ?timestamp ;
       :hasSourceObsel ?s1 ;
     ] .
 } WHERE {
