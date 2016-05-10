@@ -6,4 +6,21 @@
 <http://semweb.mmlab.be/ns/tincan2prov/version> a :AttributeType ;
   :hasAttributeDomain <#xapiStatement> ;
   :hasAttributeRange xsd:string .
-
+<http://semweb.mmlab.be/ns/tincan2prov/actor> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/verb> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/object> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/result> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/context> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/timestamp> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/stored> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/authority> a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
+<http://semweb.mmlab.be/ns/tincan2prov/version>  a :AttributeType ;
+  :hasAttributeDomain <#xapiStatement> .
