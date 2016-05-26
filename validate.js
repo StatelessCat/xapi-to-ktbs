@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 const http = require('http');
 const N3 = require('n3');
+var jsonld = require('jsonld');
 
 var n3parser = N3.Parser();
 
@@ -38,14 +39,15 @@ new Promise(function(resolve, reject) {
         });
       }
       else {
+        console.log(acc);
         resolve({prefixes: prefixes, triples: acc});
       }
     });
   });
 }).then(function(parsed) {
   return new Promise(function(resolve, reject) {
-    var writer1 = N3.Writer({ format: 'N-Triples' });
-    parsed.triples.forEach(({subject, predicate, object}) => writer1.addTriple(subject, predicate, object));
+    var writer1 = N3.Writer({ format: 'N-Quads' });
+    parsed.triples.forEach(({subject, predicate, object}) => writer1.addTriple(subject, predicate, object, 'http://example.org/'));
     writer1.end(function (error, result) {
       if (error) {
         reject(error);
@@ -55,8 +57,16 @@ new Promise(function(resolve, reject) {
       }
     });
   });
-}).then(function(triples){
-  // we got triples
-  // we can use jsonld.js to get jsonld
+}).then(function(trs){
+  var x = trs.split('\n').slice(1,3).join('\n');
+  console.log(x);
+  // deserialize N-Quads (RDF) to JSON-LD
+  jsonld.fromRDF(x, {format: 'application/nquads'}, function(err, doc) {
+    // 
+    // <> <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> "1426032000000"^^<http://www.w3.org/2001/XMLSchema#integer> <http://example.org/mycartoon>.
+    // produces : message: 'Error while parsing N-Quads; invalid quad.'
+    console.log(err);
+    console.log(doc);
+  });
 });
 
