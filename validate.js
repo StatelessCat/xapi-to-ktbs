@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* globals Promise:true */
 const http = require('http');
 const N3 = require('n3');
 var jsonld = require('jsonld');
@@ -9,7 +10,7 @@ new Promise(function(resolve, reject) {
   http.get({
     hostname: 'localhost',
     port: 8001,
-    path: '/b1/t1/02abc888-2672-45bb-8256-f01efdda6660',
+    path: '/b1/t1/@obsels',
     method: 'GET',
     headers: {
       'Accept': 'application/turtle'
@@ -39,7 +40,7 @@ new Promise(function(resolve, reject) {
         });
       }
       else {
-        console.log(acc);
+        //console.log(acc);
         resolve({prefixes: prefixes, triples: acc});
       }
     });
@@ -48,6 +49,8 @@ new Promise(function(resolve, reject) {
   return new Promise(function(resolve, reject) {
     var writer1 = N3.Writer({ format: 'N-Quads' });
     parsed.triples.forEach(({subject, predicate, object}) => writer1.addTriple(subject, predicate, object, 'http://example.org/'));
+    // ajout d'un nom de graphe qui sert juste a rendre possible la sérialisation en JSON-LD par la suite
+    
     writer1.end(function (error, result) {
       if (error) {
         reject(error);
@@ -58,15 +61,9 @@ new Promise(function(resolve, reject) {
     });
   });
 }).then(function(trs){
-  var x = trs.split('\n').slice(1,3).join('\n');
-  console.log(x);
-  // deserialize N-Quads (RDF) to JSON-LD
-  jsonld.fromRDF(x, {format: 'application/nquads'}, function(err, doc) {
-    // 
-    // <> <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> "1426032000000"^^<http://www.w3.org/2001/XMLSchema#integer> <http://example.org/mycartoon>.
-    // produces : message: 'Error while parsing N-Quads; invalid quad.'
+  jsonld.fromRDF(trs, {format: 'application/nquads'}, function(err, doc) {
     console.log(err);
-    console.log(doc);
+    console.log(JSON.stringify(doc, null, 2));
   });
 });
 
