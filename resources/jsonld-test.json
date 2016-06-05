@@ -1,0 +1,8 @@
+{
+  "@context": ["http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context"
+  ],
+  "@id": "http://ex.co/obs424242",
+  "@type": "m:xapiStatement",
+  "hasTrace": "./"
+}
+

@@ -10,11 +10,12 @@ new Promise(function(resolve, reject) {
   http.get({
     hostname: 'localhost',
     port: 8001,
-    path: '/b1/t1/@obsels',
+    path: '/b1/t1/02abc888-2672-45bb-8256-f01efdda6660',
     method: 'GET',
     headers: {
-      'Accept': 'application/turtle'
+      'Accept': 'text/plain'
     }
+    // TODO app/ntriples ? 
   }, (res) => {
     res.setEncoding('utf8');
     var acc = "";
@@ -28,42 +29,18 @@ new Promise(function(resolve, reject) {
   }).on('error', (e) => {
     reject(e);
   });  
-}).then(function(val){
+}).then(function(ntriples){
   return new Promise(function(resolve, reject) {
-    var acc = [];
-    n3parser.parse(val, function (error, triple, prefixes) {
-      if (triple) {
-        acc.push({
-          subject:   triple.subject,
-          predicate: triple.predicate,
-          object:    triple.object
-        });
-      }
-      else {
-        //console.log(acc);
-        resolve({prefixes: prefixes, triples: acc});
-      }
+    jsonld.fromRDF(ntriples, {format: 'application/nquads'}, function(err, doc) {
+      console.log(err);
+      // console.log(JSON.stringify(doc, null, 2));
+      jsonld.compact(doc, {}, function(err, compacted) {
+        console.log("------------");
+        console.log(JSON.stringify(compacted, null, 2));
+        console.log("------------");
+      });
     });
-  });
-}).then(function(parsed) {
-  return new Promise(function(resolve, reject) {
-    var writer1 = N3.Writer({ format: 'N-Quads' });
-    parsed.triples.forEach(({subject, predicate, object}) => writer1.addTriple(subject, predicate, object, 'http://example.org/'));
-    // ajout d'un nom de graphe qui sert juste a rendre possible la sérialisation en JSON-LD par la suite
-    
-    writer1.end(function (error, result) {
-      if (error) {
-        reject(error);
-      }
-      else {
-        resolve(result);
-      }
-    });
-  });
-}).then(function(trs){
-  jsonld.fromRDF(trs, {format: 'application/nquads'}, function(err, doc) {
-    console.log(err);
-    console.log(JSON.stringify(doc, null, 2));
   });
 });
+
 

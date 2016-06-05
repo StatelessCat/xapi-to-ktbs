@@ -7,9 +7,9 @@ const nquads_docs = [
 
   '_:b0 <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> <http://ex.co/xxx> .',
   
-  '<> <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> <http://ex.co/xxx>  <http://ex.co/xxx> .',
+  '<> <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> <http://ex.co/xxx>  <http://ex.co/yyy> .',
 
-  '_:b0 <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> <http://ex.co/xxx>  <http://ex.co/xxx> .',
+  '_:b0 <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> <http://ex.co/xxx>  <http://ex.co/yyy> .',
   
   '<> <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> "14260"^^<http://www.w3.org/2001/XMLSchema#integer> .',
 

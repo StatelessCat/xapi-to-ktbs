@@ -54,6 +54,7 @@ statements.filter(function(st) {
   ss2["@type"] = ["m:xapiStatement", ss1["@type"]];
   // ^ TODO handle the case of ss1["@type"] is an array
   ss2["hasTrace"] = "./";
+  ss2["beginDT"] = "2015-03-11T00:00:00+00:00"; // TODO 
   ss2["@context"] = [
     "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
     ss1["@context"],
