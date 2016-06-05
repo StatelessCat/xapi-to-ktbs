@@ -4,6 +4,7 @@ const http = require('http');
 const N3 = require('n3');
 const fs = require('fs');
 var jsonld = require('jsonld');
+const deterministic_stringify = require('json-stable-stringify');
 
 var n3parser = N3.Parser();
 
@@ -14,6 +15,9 @@ var frame_ = JSON.parse(frame_str);
 const XAPI_CONTEXT_PATH = './resources/tincan2prov/tincan2prov.jsonld';
 var xapi_context_str = fs.readFileSync(XAPI_CONTEXT_PATH, 'utf8');
 var xapi_context = JSON.parse(xapi_context_str);
+
+const OUT_PATH = './resources/out/';
+const OUT_FRAMED_PATH = './resources/out-framed/';
 
 new Promise(function(resolve, reject) {
   http.get({
@@ -42,12 +46,14 @@ new Promise(function(resolve, reject) {
   return new Promise(function(resolve, reject) {
     jsonld.fromRDF(ntriples, {format: 'application/nquads'}, function(err, doc) {
       console.log(err);
-      fs.writeFile('statement-1-jsonld-out.json', JSON.stringify(doc, null, 2), (err) => {
-        if (err) throw err;
-        console.log('It\'s saved!');
-      });
+      // const out_filename = OUT_PATH + 'eval-' + doc.id + '-out.json';
+      // fs.writeFile(out_filename, JSON.stringify(doc, null, 2), (err) => {
+      //   if (err) throw err;
+      //   console.log('It\'s saved!');
+      // });
       jsonld.frame(doc, frame_, function(err, framed) {
-        fs.writeFile('statement-1-jsonld-out-framed.json', JSON.stringify(framed, null, 2), (err) => {
+        const out_framed_filename = OUT_FRAMED_PATH + 'eval-' + framed['@graph'][0]['id'] + '-out-framed.json';
+        fs.writeFile(out_framed_filename, deterministic_stringify(framed, {space: 2}), (err) => {
           if (err) throw err;
           console.log('It\'s saved!');
         });
