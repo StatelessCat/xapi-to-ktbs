@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const fs = require('fs');
-const ktbs = require('./ktbs');
-const evparser = require('./evparser');
+const ktbs = require('./lib/ktbs');
+const evparser = require('./lib/evparser');
 
 const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
 // const SPARQL_TRANS_PATH = './resources/trans.rq'; // TODO use me
@@ -54,7 +54,8 @@ statements.filter(function(st) {
   ss2["@type"] = ["m:xapiStatement", ss1["@type"]];
   // ^ TODO handle the case of ss1["@type"] is an array
   ss2["hasTrace"] = "./";
-  ss2["beginDT"] = "2015-03-11T00:00:00+00:00"; // TODO 
+  ss2["beginDT"] = ss2.timestamp;
+  ss2["endDT"] = ss2.timestamp;
   ss2["@context"] = [
     "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
     ss1["@context"],
