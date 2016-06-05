@@ -1,0 +1,17 @@
+{
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "@context": {
+    "version": "http://semweb.mmlab.be/ns/tincan2prov/version",
+    "verb": "http://semweb.mmlab.be/ns/tincan2prov/verb",
+    "timestamp": "http://semweb.mmlab.be/ns/tincan2prov/timestamp",
+    "actor": "http://semweb.mmlab.be/ns/tincan2prov/actor",
+    "authority": "http://semweb.mmlab.be/ns/tincan2prov/authority",
+    "id": "http://semweb.mmlab.be/ns/tincan2prov/id",
+    "object": "http://semweb.mmlab.be/ns/tincan2prov/object",
+    "stored": "http://semweb.mmlab.be/ns/tincan2prov/stored",
+    "definition": "http://semweb.mmlab.be/ns/tincan2prov/definition",
+    "name": "http://semweb.mmlab.be/ns/tincan2prov/name",
+    "account": "http://semweb.mmlab.be/ns/tincan2prov/account",
+    "homepage": "http://semweb.mmlab.be/ns/tincan2prov/homepage"
+  }
+}
