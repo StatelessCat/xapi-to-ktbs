@@ -11,6 +11,10 @@ const FRAME_PATH = './resources/framing/frame.json';
 var frame_str = fs.readFileSync(FRAME_PATH, 'utf8');
 var frame_ = JSON.parse(frame_str);
 
+const XAPI_CONTEXT_PATH = './resources/tincan2prov/tincan2prov.jsonld';
+var xapi_context_str = fs.readFileSync(XAPI_CONTEXT_PATH, 'utf8');
+var xapi_context = JSON.parse(xapi_context_str);
+
 new Promise(function(resolve, reject) {
   http.get({
     hostname: 'localhost',
@@ -38,18 +42,15 @@ new Promise(function(resolve, reject) {
   return new Promise(function(resolve, reject) {
     jsonld.fromRDF(ntriples, {format: 'application/nquads'}, function(err, doc) {
       console.log(err);
-      // console.log(JSON.stringify(doc, null, 2));
-
+      fs.writeFile('statement-1-jsonld-out.json', JSON.stringify(doc, null, 2), (err) => {
+        if (err) throw err;
+        console.log('It\'s saved!');
+      });
       jsonld.frame(doc, frame_, function(err, framed) {
         fs.writeFile('statement-1-jsonld-out-framed.json', JSON.stringify(framed, null, 2), (err) => {
           if (err) throw err;
           console.log('It\'s saved!');
         });
-      });
-
-      fs.writeFile('statement-1-jsonld-out.json', JSON.stringify(doc, null, 2), (err) => {
-        if (err) throw err;
-        console.log('It\'s saved!');
       });
     });
   });
