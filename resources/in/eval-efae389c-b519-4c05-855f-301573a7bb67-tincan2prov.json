@@ -1,0 +1,54 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:cc@gmail.com",
+    "name": "cc",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "context": {
+    "contextActivities": {
+      "category": [
+        {
+          "id": "http://corestandards.org/ELA-Literacy/CCRA/R/2",
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "id": "efae389c-b519-4c05-855f-301573a7bb67",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "description": {
+        "en-US": "Example activity definition"
+      },
+      "name": {
+        "en-US": "Example Activity"
+      }
+    },
+    "id": "http://www.example.com/tincan/activities/pnGZEDXB",
+    "objectType": "Activity"
+  },
+  "stored": "2015-03-06T12:40:29.179Z",
+  "timestamp": "2015-03-06T12:40:29.179Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "en-US": "created"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/created"
+  },
+  "version": "1.0.0"
+}

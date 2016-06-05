@@ -1,0 +1,35 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "account": {
+      "homePage": "http://localhost/",
+      "name": "20d5f22a-39a8-42d5-96da-180f8f7bb329"
+    },
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "id": "ee7f4be9-521e-4136-b5b1-7902185a4a19",
+  "object": {
+    "id": "232c24cd-db89-4334-9122-b9da0357c89a",
+    "objectType": "StatementRef"
+  },
+  "stored": "2015-03-06T12:15:14.525Z",
+  "timestamp": "2015-03-06T12:15:14.143Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "en-GB": "Voided"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/voided"
+  },
+  "version": "1.0.1"
+}

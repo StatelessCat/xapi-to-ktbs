@@ -1,0 +1,43 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:name@domain.com",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "id": "30ad5565-4963-4570-ae99-46ef88018908",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "description": {
+        "en-US": "Example activity definition"
+      },
+      "name": {
+        "en-US": "Example Activity"
+      }
+    },
+    "id": "http://www.example.com/tincan/activities/oCuHWZLV",
+    "objectType": "Activity"
+  },
+  "stored": "2015-01-31T23:11:10.615Z",
+  "timestamp": "2015-01-31T23:11:10.615Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "en-US": "activity"
+    },
+    "id": "http://www.example.com/tincan/activities/v1"
+  },
+  "version": "1.0.0"
+}

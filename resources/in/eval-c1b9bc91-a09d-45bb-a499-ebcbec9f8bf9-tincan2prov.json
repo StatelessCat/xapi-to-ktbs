@@ -1,0 +1,92 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:test@beta.projecttincan.com",
+    "name": "Test User",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "context": {
+    "contextActivities": {
+      "grouping": [
+        {
+          "id": "http://tincanapi.com/GolfExample_TCAPI",
+          "objectType": "Activity"
+        }
+      ],
+      "parent": [
+        {
+          "id": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment.html",
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "id": "c1b9bc91-a09d-45bb-a499-ebcbec9f8bf9",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "choices": [
+        {
+          "description": {
+            "en-US": "The UN"
+          },
+          "id": "The UN"
+        },
+        {
+          "description": {
+            "en-US": "USGA and Royal and Ancient"
+          },
+          "id": "USGA and Royal and Ancient"
+        },
+        {
+          "description": {
+            "en-US": "The PGA"
+          },
+          "id": "The PGA"
+        },
+        {
+          "description": {
+            "en-US": "Each course has it's own rules"
+          },
+          "id": "Each course has it's own rules"
+        }
+      ],
+      "correctResponsesPattern": [
+        "USGA and Royal and Ancient"
+      ],
+      "description": {
+        "en-US": "The rules of golf are maintained by:"
+      },
+      "interactionType": "choice",
+      "type": "http://adlnet.gov/expapi/activities/cmi.interaction"
+    },
+    "id": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment/interactions.playing_1",
+    "objectType": "Activity"
+  },
+  "result": {
+    "response": "USGA and Royal and Ancient",
+    "success": true
+  },
+  "stored": "2015-03-06T01:29:05.829Z",
+  "timestamp": "2015-03-06T01:29:04.105Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "und": "answered"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/answered"
+  },
+  "version": "1.0.0"
+}

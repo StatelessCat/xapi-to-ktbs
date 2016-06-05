@@ -1,0 +1,60 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:name@domain.com",
+    "name": "john smith",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "context": {
+    "contextActivities": {
+      "grouping": [
+        {
+          "id": "http://tincanapi.com/GolfExample_TCAPI",
+          "objectType": "Activity"
+        }
+      ],
+      "parent": [
+        {
+          "id": "http://tincanapi.com/GolfExample_TCAPI",
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "id": "3f5a3172-8b2b-4cfe-853f-cdefe9e6d119",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "description": {
+        "en-US": "An example of how to calculate a score with an applied handicap for a round of golf."
+      },
+      "name": {
+        "en-US": "Handicapping Example"
+      }
+    },
+    "id": "http://tincanapi.com/GolfExample_TCAPI/Handicapping/Example.html",
+    "objectType": "Activity"
+  },
+  "stored": "2015-01-31T22:23:11.278Z",
+  "timestamp": "2015-01-31T22:23:11.044Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "und": "experienced"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/experienced"
+  },
+  "version": "1.0.0"
+}

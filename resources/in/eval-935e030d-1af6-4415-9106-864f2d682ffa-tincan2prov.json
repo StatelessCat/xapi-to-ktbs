@@ -1,0 +1,44 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:ospite@example.com",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "id": "935e030d-1af6-4415-9106-864f2d682ffa",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "description": {
+        "it-IT": "Utilizzo specifico dello smart object �sfigmomanometro�"
+      },
+      "name": {
+        "it-IT": "Utilizzo specifico dello smart object �sfigmomanometro�"
+      },
+      "type": "http://adlnet.gov/expapi/activities/module"
+    },
+    "id": "http://95.240.231.161:3000/video/15_sfigmomanometro_rev1",
+    "objectType": "Activity"
+  },
+  "stored": "2015-03-06T11:33:07.822Z",
+  "timestamp": "2015-03-06T11:33:07.822Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "it-IT": "lasciato"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/exited"
+  },
+  "version": "1.0.0"
+}

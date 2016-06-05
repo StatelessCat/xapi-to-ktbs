@@ -1,0 +1,66 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:test@beta.projecttincan.com",
+    "name": "Test User",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "context": {
+    "contextActivities": {
+      "grouping": [
+        {
+          "id": "http://tincanapi.com/GolfExample_TCAPI",
+          "objectType": "Activity"
+        }
+      ],
+      "parent": [
+        {
+          "id": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment.html",
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "id": "6543bf80-2819-40a8-bf7e-064d9b9f4800",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "correctResponsesPattern": [
+        "2"
+      ],
+      "description": {
+        "en-US": "Golfer A has a course handicap of 3. Golfer B has a course handicap of 28. On the 6th handicap hole, how many strokes will Golfer A have to give Golfer B in match play?"
+      },
+      "interactionType": "numeric",
+      "type": "http://adlnet.gov/expapi/activities/cmi.interaction"
+    },
+    "id": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment/interactions.handicap_4",
+    "objectType": "Activity"
+  },
+  "result": {
+    "response": "3",
+    "success": false
+  },
+  "stored": "2015-03-06T01:29:05.803Z",
+  "timestamp": "2015-03-06T01:29:04.103Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "und": "answered"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/answered"
+  },
+  "version": "1.0.0"
+}

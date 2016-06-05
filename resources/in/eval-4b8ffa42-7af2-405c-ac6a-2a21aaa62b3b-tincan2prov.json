@@ -1,0 +1,70 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:test@beta.projecttincan.com",
+    "name": "Test User",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "context": {
+    "contextActivities": {
+      "grouping": [
+        {
+          "id": "http://tincanapi.com/JsTetris_TCAPI",
+          "objectType": "Activity"
+        }
+      ]
+    },
+    "extensions": {
+      "http://tincanapi.com/JsTetris_TCAPI/gameId": "fab5da24-1c8d-4592-baf2-6a1c034271e5"
+    }
+  },
+  "id": "4b8ffa42-7af2-405c-ac6a-2a21aaa62b3b",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "description": {
+        "en-US": "A game of tetris."
+      },
+      "name": {
+        "en-US": "Js Tetris - Tin Can Prototype"
+      },
+      "type": "http://adlnet.gov/expapi/activities/media"
+    },
+    "id": "http://tincanapi.com/JsTetris_TCAPI",
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      "http://tincanapi.com/JsTetris_TCAPI/apm": 257,
+      "http://tincanapi.com/JsTetris_TCAPI/level": 2,
+      "http://tincanapi.com/JsTetris_TCAPI/lines": 1,
+      "http://tincanapi.com/JsTetris_TCAPI/time": 66
+    },
+    "score": {
+      "min": 0,
+      "raw": 2387
+    }
+  },
+  "stored": "2015-03-06T01:31:09.817Z",
+  "timestamp": "2015-03-06T01:31:10.176Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "und": "completed"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/completed"
+  },
+  "version": "1.0.0"
+}

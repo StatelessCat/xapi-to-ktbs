@@ -1,0 +1,62 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:auto_tests@example.scorm.com",
+    "name": "Auto Test Learner",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "context": {
+    "contextActivities": {
+      "grouping": [
+        {
+          "id": "tag:adlnet.gov,2013:expapi:0.9:activities:scorm.com/GolfExample_TCAPI",
+          "objectType": "Activity"
+        }
+      ],
+      "other": [
+        {
+          "id": "tag:adlnet.gov,2013:expapi:0.9:activities:com.scorm.golfsamples.context_other",
+          "objectType": "Activity"
+        }
+      ],
+      "parent": [
+        {
+          "id": "tag:adlnet.gov,2013:expapi:0.9:activities:scorm.com/GolfExample_TCAPI/GolfAssessment.html",
+          "objectType": "Activity"
+        }
+      ]
+    }
+  },
+  "id": "5fecbed0-8cac-4a2c-be04-ee85f4e3f2ce",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "id": "tag:adlnet.gov,2013:expapi:0.9:activities:com.scorm.golfsamples.interactions.playing_1",
+    "objectType": "Activity"
+  },
+  "result": {
+    "response": "USGA",
+    "success": true
+  },
+  "stored": "2015-03-05T19:54:31.021Z",
+  "timestamp": "2015-03-05T19:54:31.021Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "en-US": "answered"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/answered"
+  },
+  "version": "1.0.0"
+}

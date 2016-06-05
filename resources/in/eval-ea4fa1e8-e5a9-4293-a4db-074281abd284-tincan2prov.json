@@ -1,0 +1,45 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:name@domain.com",
+    "name": "First Last",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "id": "ea4fa1e8-e5a9-4293-a4db-074281abd284",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "definition": {
+      "description": {
+        "en-US": "An exploration of museums in the greater Nashville TN area."
+      },
+      "name": {
+        "en-US": "Nashville Museums Tour"
+      },
+      "type": "http://adlnet.gov/expapi/activities/course"
+    },
+    "id": "http://tincanapi.com/Course/NashvilleMuseumsTour",
+    "objectType": "Activity"
+  },
+  "stored": "2015-01-31T22:25:41.462Z",
+  "timestamp": "2015-01-31T22:25:41.561Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "und": "attempted"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/attempted"
+  },
+  "version": "1.0.0"
+}

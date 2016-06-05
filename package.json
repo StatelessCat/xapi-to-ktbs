@@ -22,6 +22,7 @@
   "dependencies": {
     "bluebird": "^3.4.0",
     "cheerio": "^0.20.0",
+    "json-stable-stringify": "^1.0.1",
     "jsonld": "^0.4.11",
     "n3": "^0.4.5"
   }

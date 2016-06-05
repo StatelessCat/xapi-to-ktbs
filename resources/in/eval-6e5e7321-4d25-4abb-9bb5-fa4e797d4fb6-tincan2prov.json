@@ -1,0 +1,35 @@
+{
+  "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+  "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+  "actor": {
+    "mbox": "mailto:tincan.net-github@tincanapi.com",
+    "objectType": "Agent"
+  },
+  "authority": {
+    "account": {
+      "homePage": "http://cloud.scorm.com/",
+      "name": "anonymous"
+    },
+    "objectType": "Agent"
+  },
+  "id": "6e5e7321-4d25-4abb-9bb5-fa4e797d4fb6",
+  "object": {
+    "@context": {
+      "id": "@id"
+    },
+    "id": "http://rusticisoftware.github.com/TinCan.NET",
+    "objectType": "Activity"
+  },
+  "stored": "2015-01-31T22:58:37.030Z",
+  "timestamp": "2015-01-31T22:58:40.590Z",
+  "verb": {
+    "@context": {
+      "id": "@id"
+    },
+    "display": {
+      "und": "experienced"
+    },
+    "id": "http://adlnet.gov/expapi/verbs/experienced"
+  },
+  "version": "1.0.0"
+}
