@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "account": "http://semweb.mmlab.be/ns/tincan2prov/account",
+    "actor": "http://semweb.mmlab.be/ns/tincan2prov/actor",
+    "authority": "http://semweb.mmlab.be/ns/tincan2prov/authority",
+    "definition": "http://semweb.mmlab.be/ns/tincan2prov/definition",
+    "display": "http://semweb.mmlab.be/ns/tincan2prov/display",
+    "homepage": "http://semweb.mmlab.be/ns/tincan2prov/homepage",
+    "id": "http://semweb.mmlab.be/ns/tincan2prov/id",
+    "name": "http://semweb.mmlab.be/ns/tincan2prov/name",
+    "object": "http://semweb.mmlab.be/ns/tincan2prov/object",
+    "stored": "http://semweb.mmlab.be/ns/tincan2prov/stored",
+    "timestamp": "http://semweb.mmlab.be/ns/tincan2prov/timestamp",
+    "verb": "http://semweb.mmlab.be/ns/tincan2prov/verb",
+    "version": "http://semweb.mmlab.be/ns/tincan2prov/version"
+  },
+  "@graph": [
+    {
+      "@id": "http://localhost:8001/b1/t1/6d4cbe14-5fb6-4330-a1cf-a3188c4518e2",
+      "@type": [
+        "http://localhost:8001/b1/m1#xapiStatement",
+        "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+      ],
+      "actor": {
+        "@id": "_:b0",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "http://xmlns.com/foaf/0.1/mbox": {
+          "@language": "en",
+          "@value": "mailto:info@tincanapi.com"
+        }
+      },
+      "authority": {
+        "@id": "_:b1",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "account": {
+          "@id": "_:b2",
+          "http://semweb.mmlab.be/ns/tincan2prov/homePage": {
+            "@type": "http://xmlns.com/foaf/0.1/Document",
+            "@value": "http://cloud.scorm.com/"
+          },
+          "name": {
+            "@language": "en",
+            "@value": "anonymous"
+          }
+        }
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422684933839"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422684933839"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": {
+        "@id": "http://localhost:8001/b1/t1/"
+      },
+      "http://semweb.mmlab.be/ns/tincan2prov/result": {
+        "@id": "_:b3",
+        "http://semweb.mmlab.be/ns/tincan2prov/response": {
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "@value": "page viewed"
+        }
+      },
+      "id": "6d4cbe14-5fb6-4330-a1cf-a3188c4518e2",
+      "object": {
+        "@id": "http://jwpilkington.me/capstone/seb/youtube/trackteast.php?",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+      },
+      "stored": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      },
+      "timestamp": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      },
+      "verb": {
+        "@id": "http://id.tincanapi.com/verb/viewed"
+      },
+      "version": "1.0.0"
+    }
+  ]
+}

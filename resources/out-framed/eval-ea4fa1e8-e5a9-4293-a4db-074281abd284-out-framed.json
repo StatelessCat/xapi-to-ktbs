@@ -1,0 +1,108 @@
+{
+  "@context": {
+    "account": "http://semweb.mmlab.be/ns/tincan2prov/account",
+    "actor": "http://semweb.mmlab.be/ns/tincan2prov/actor",
+    "authority": "http://semweb.mmlab.be/ns/tincan2prov/authority",
+    "definition": "http://semweb.mmlab.be/ns/tincan2prov/definition",
+    "display": "http://semweb.mmlab.be/ns/tincan2prov/display",
+    "homepage": "http://semweb.mmlab.be/ns/tincan2prov/homepage",
+    "id": "http://semweb.mmlab.be/ns/tincan2prov/id",
+    "name": "http://semweb.mmlab.be/ns/tincan2prov/name",
+    "object": "http://semweb.mmlab.be/ns/tincan2prov/object",
+    "stored": "http://semweb.mmlab.be/ns/tincan2prov/stored",
+    "timestamp": "http://semweb.mmlab.be/ns/tincan2prov/timestamp",
+    "verb": "http://semweb.mmlab.be/ns/tincan2prov/verb",
+    "version": "http://semweb.mmlab.be/ns/tincan2prov/version"
+  },
+  "@graph": [
+    {
+      "@id": "http://localhost:8001/b1/t1/ea4fa1e8-e5a9-4293-a4db-074281abd284",
+      "@type": [
+        "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+        "http://localhost:8001/b1/m1#xapiStatement"
+      ],
+      "actor": {
+        "@id": "_:b0",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "http://xmlns.com/foaf/0.1/mbox": {
+          "@language": "en",
+          "@value": "mailto:name@domain.com"
+        },
+        "name": {
+          "@language": "en",
+          "@value": "First Last"
+        }
+      },
+      "authority": {
+        "@id": "_:b1",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "account": {
+          "@id": "_:b2",
+          "http://semweb.mmlab.be/ns/tincan2prov/homePage": {
+            "@type": "http://xmlns.com/foaf/0.1/Document",
+            "@value": "http://cloud.scorm.com/"
+          },
+          "name": {
+            "@language": "en",
+            "@value": "anonymous"
+          }
+        }
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422743141561"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:25:41.561000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422743141561"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:25:41.561000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": {
+        "@id": "http://localhost:8001/b1/t1/"
+      },
+      "id": "ea4fa1e8-e5a9-4293-a4db-074281abd284",
+      "object": {
+        "@id": "http://tincanapi.com/Course/NashvilleMuseumsTour",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+        "definition": {
+          "@id": "_:b3",
+          "http://semweb.mmlab.be/ns/tincan2prov/description": {
+            "@language": "en-us",
+            "@value": "An exploration of museums in the greater Nashville TN area."
+          },
+          "http://semweb.mmlab.be/ns/tincan2prov/type": {
+            "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+            "@value": "http://adlnet.gov/expapi/activities/course"
+          },
+          "name": {
+            "@language": "en-us",
+            "@value": "Nashville Museums Tour"
+          }
+        }
+      },
+      "stored": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:25:41.462000+00:00"
+      },
+      "timestamp": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:25:41.561000+00:00"
+      },
+      "verb": {
+        "@id": "http://adlnet.gov/expapi/verbs/attempted",
+        "display": {
+          "@language": "und",
+          "@value": "attempted"
+        }
+      },
+      "version": "1.0.0"
+    }
+  ]
+}

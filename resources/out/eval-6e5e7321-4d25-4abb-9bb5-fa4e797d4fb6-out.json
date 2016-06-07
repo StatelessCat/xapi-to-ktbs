@@ -1,0 +1,133 @@
+[
+  {
+    "@id": "_:f00e720501a024369bd43ea537c56adbcb1",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@language": "en",
+        "@value": "mailto:tincan.net-github@tincanapi.com"
+      }
+    ]
+  },
+  {
+    "@id": "_:f00e720501a024369bd43ea537c56adbcb2",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/account": [
+      {
+        "@id": "_:f00e720501a024369bd43ea537c56adbcb3"
+      }
+    ]
+  },
+  {
+    "@id": "_:f00e720501a024369bd43ea537c56adbcb3",
+    "http://semweb.mmlab.be/ns/tincan2prov/homePage": [
+      {
+        "@type": "http://xmlns.com/foaf/0.1/Document",
+        "@value": "http://cloud.scorm.com/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "anonymous"
+      }
+    ]
+  },
+  {
+    "@id": "http://adlnet.gov/expapi/verbs/experienced",
+    "http://semweb.mmlab.be/ns/tincan2prov/display": [
+      {
+        "@language": "und",
+        "@value": "experienced"
+      }
+    ]
+  },
+  {
+    "@id": "http://localhost:8001/b1/t1/6e5e7321-4d25-4abb-9bb5-fa4e797d4fb6",
+    "@type": [
+      "http://localhost:8001/b1/m1#xapiStatement",
+      "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422745120590"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:58:40.590000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422745120590"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:58:40.590000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": [
+      {
+        "@id": "http://localhost:8001/b1/t1/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/actor": [
+      {
+        "@id": "_:f00e720501a024369bd43ea537c56adbcb1"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/authority": [
+      {
+        "@id": "_:f00e720501a024369bd43ea537c56adbcb2"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "6e5e7321-4d25-4abb-9bb5-fa4e797d4fb6"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/object": [
+      {
+        "@id": "http://rusticisoftware.github.com/TinCan.NET"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/stored": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:58:37.030000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/timestamp": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T22:58:40.590000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/verb": [
+      {
+        "@id": "http://adlnet.gov/expapi/verbs/experienced"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/version": [
+      {
+        "@value": "1.0.0"
+      }
+    ]
+  },
+  {
+    "@id": "http://rusticisoftware.github.com/TinCan.NET",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ]
+  }
+]

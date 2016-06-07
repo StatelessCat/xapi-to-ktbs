@@ -1,0 +1,138 @@
+[
+  {
+    "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb1",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@language": "en",
+        "@value": "mailto:info@tincanapi.com"
+      }
+    ]
+  },
+  {
+    "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb2",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/account": [
+      {
+        "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb4"
+      }
+    ]
+  },
+  {
+    "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb3",
+    "http://semweb.mmlab.be/ns/tincan2prov/response": [
+      {
+        "@type": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "@value": "page viewed"
+      }
+    ]
+  },
+  {
+    "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb4",
+    "http://semweb.mmlab.be/ns/tincan2prov/homePage": [
+      {
+        "@type": "http://xmlns.com/foaf/0.1/Document",
+        "@value": "http://cloud.scorm.com/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "anonymous"
+      }
+    ]
+  },
+  {
+    "@id": "http://jwpilkington.me/capstone/seb/youtube/trackteast.php?",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ]
+  },
+  {
+    "@id": "http://localhost:8001/b1/t1/6d4cbe14-5fb6-4330-a1cf-a3188c4518e2",
+    "@type": [
+      "http://localhost:8001/b1/m1#xapiStatement",
+      "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422684933839"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422684933839"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": [
+      {
+        "@id": "http://localhost:8001/b1/t1/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/actor": [
+      {
+        "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb1"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/authority": [
+      {
+        "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb2"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "6d4cbe14-5fb6-4330-a1cf-a3188c4518e2"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/object": [
+      {
+        "@id": "http://jwpilkington.me/capstone/seb/youtube/trackteast.php?"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/result": [
+      {
+        "@id": "_:fd7f706ed6aa448bdb7694c89de7506fbb3"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/stored": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/timestamp": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-01-31T06:15:33.839000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/verb": [
+      {
+        "@id": "http://id.tincanapi.com/verb/viewed"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/version": [
+      {
+        "@value": "1.0.0"
+      }
+    ]
+  }
+]

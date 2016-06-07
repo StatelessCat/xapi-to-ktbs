@@ -1,0 +1,191 @@
+[
+  {
+    "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b1",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "cc"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@language": "en",
+        "@value": "mailto:cc@gmail.com"
+      }
+    ]
+  },
+  {
+    "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b2",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/account": [
+      {
+        "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b6"
+      }
+    ]
+  },
+  {
+    "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b3",
+    "http://semweb.mmlab.be/ns/tincan2prov/contextActivities": [
+      {
+        "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b5"
+      }
+    ]
+  },
+  {
+    "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b4",
+    "http://semweb.mmlab.be/ns/tincan2prov/description": [
+      {
+        "@language": "en-us",
+        "@value": "Example activity definition"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en-us",
+        "@value": "Example Activity"
+      }
+    ]
+  },
+  {
+    "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b5",
+    "http://semweb.mmlab.be/ns/tincan2prov/category": [
+      {
+        "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b7"
+      }
+    ]
+  },
+  {
+    "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b6",
+    "http://semweb.mmlab.be/ns/tincan2prov/homePage": [
+      {
+        "@type": "http://xmlns.com/foaf/0.1/Document",
+        "@value": "http://cloud.scorm.com/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "anonymous"
+      }
+    ]
+  },
+  {
+    "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b7",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "http://corestandards.org/ELA-Literacy/CCRA/R/2"
+      }
+    ]
+  },
+  {
+    "@id": "http://adlnet.gov/expapi/verbs/created",
+    "http://semweb.mmlab.be/ns/tincan2prov/display": [
+      {
+        "@language": "en-us",
+        "@value": "created"
+      }
+    ]
+  },
+  {
+    "@id": "http://localhost:8001/b1/t1/efae389c-b519-4c05-855f-301573a7bb67",
+    "@type": [
+      "http://localhost:8001/b1/m1#xapiStatement",
+      "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425645629179"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T12:40:29.179000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425645629179"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T12:40:29.179000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": [
+      {
+        "@id": "http://localhost:8001/b1/t1/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/actor": [
+      {
+        "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b1"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/authority": [
+      {
+        "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b2"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/context": [
+      {
+        "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b3"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "efae389c-b519-4c05-855f-301573a7bb67"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/object": [
+      {
+        "@id": "http://www.example.com/tincan/activities/pnGZEDXB"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/stored": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T12:40:29.179000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/timestamp": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T12:40:29.179000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/verb": [
+      {
+        "@id": "http://adlnet.gov/expapi/verbs/created"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/version": [
+      {
+        "@value": "1.0.0"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.example.com/tincan/activities/pnGZEDXB",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/definition": [
+      {
+        "@id": "_:f3119dd6f1ce348198d2ebe00e4ff4532b4"
+      }
+    ]
+  }
+]

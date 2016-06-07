@@ -1,0 +1,48 @@
+<http://adlnet.gov/expapi/verbs/experienced> <http://semweb.mmlab.be/ns/tincan2prov/display> "experienced"@en-us .
+<http://example.com/activities/solo-hang-gliding> <http://semweb.mmlab.be/ns/tincan2prov/definition> _:b4 .
+<http://example.com/activities/solo-hang-gliding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Activity> .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/actor> _:b1 .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/authority> _:b2 .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/id> "be3ece5e-477b-4f02-be8e-5badb5ca9873" .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/object> <http://example.com/activities/solo-hang-gliding> .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/stored> "2015-02-01T01:11:12.203Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/timestamp> "2015-02-01T01:11:12.203Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/verb> <http://adlnet.gov/expapi/verbs/experienced> .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/version> "1.0.0" .
+_:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Statement> .
+_:b1 <http://semweb.mmlab.be/ns/tincan2prov/name> "Sally2 Glider"@en .
+_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Agent> .
+_:b1 <http://xmlns.com/foaf/0.1/mbox> "mailto:sally2@example.com"@en .
+_:b2 <http://semweb.mmlab.be/ns/tincan2prov/account> _:b3 .
+_:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Agent> .
+_:b3 <http://semweb.mmlab.be/ns/tincan2prov/homePage> "http://cloud.scorm.com/"^^<http://xmlns.com/foaf/0.1/Document> .
+_:b3 <http://semweb.mmlab.be/ns/tincan2prov/name> "anonymous"@en .
+_:b4 <http://semweb.mmlab.be/ns/tincan2prov/name> "Solo Hang Gliding"@en-us .
+
+
+<http://adlnet.gov/expapi/verbs/experienced> <http://semweb.mmlab.be/ns/tincan2prov/display> "experienced"@en-us .
+<http://example.com/activities/solo-hang-gliding> <http://semweb.mmlab.be/ns/tincan2prov/definition> _:b0 .
+<http://example.com/activities/solo-hang-gliding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Activity> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://liris.cnrs.fr/silex/2009/ktbs#hasBegin> "1422753072203"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT> "2015-02-01T01:11:12.203000+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://liris.cnrs.fr/silex/2009/ktbs#hasEnd> "1422753072203"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT> "2015-02-01T01:11:12.203000+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://liris.cnrs.fr/silex/2009/ktbs#hasTrace> <http://localhost:8001/b1/t1/> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/actor> _:b1 .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/authority> _:b2 .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/id> "be3ece5e-477b-4f02-be8e-5badb5ca9873" .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/object> <http://example.com/activities/solo-hang-gliding> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/stored> "2015-02-01T01:11:12.203000+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/timestamp> "2015-02-01T01:11:12.203000+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/verb> <http://adlnet.gov/expapi/verbs/experienced> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://semweb.mmlab.be/ns/tincan2prov/version> "1.0.0" .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://localhost:8001/b1/m1#xapiStatement> .
+<http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Statement> .
+_:b0 <http://semweb.mmlab.be/ns/tincan2prov/name> "Solo Hang Gliding"@en-us .
+_:b1 <http://semweb.mmlab.be/ns/tincan2prov/name> "Sally2 Glider"@en .
+_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Agent> .
+_:b1 <http://xmlns.com/foaf/0.1/mbox> "mailto:sally2@example.com"@en .
+_:b2 <http://semweb.mmlab.be/ns/tincan2prov/account> _:b3 .
+_:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://semweb.mmlab.be/ns/tincan2prov/Agent> .
+_:b3 <http://semweb.mmlab.be/ns/tincan2prov/homePage> "http://cloud.scorm.com/"^^<http://xmlns.com/foaf/0.1/Document> .
+_:b3 <http://semweb.mmlab.be/ns/tincan2prov/name> "anonymous"@en .

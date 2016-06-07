@@ -12,6 +12,7 @@
     "definition": "http://semweb.mmlab.be/ns/tincan2prov/definition",
     "name": "http://semweb.mmlab.be/ns/tincan2prov/name",
     "account": "http://semweb.mmlab.be/ns/tincan2prov/account",
+    "display": "http://semweb.mmlab.be/ns/tincan2prov/display",
     "homepage": "http://semweb.mmlab.be/ns/tincan2prov/homepage"
   }
 }

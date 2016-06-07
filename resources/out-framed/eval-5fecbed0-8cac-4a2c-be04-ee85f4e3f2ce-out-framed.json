@@ -1,0 +1,125 @@
+{
+  "@context": {
+    "account": "http://semweb.mmlab.be/ns/tincan2prov/account",
+    "actor": "http://semweb.mmlab.be/ns/tincan2prov/actor",
+    "authority": "http://semweb.mmlab.be/ns/tincan2prov/authority",
+    "definition": "http://semweb.mmlab.be/ns/tincan2prov/definition",
+    "display": "http://semweb.mmlab.be/ns/tincan2prov/display",
+    "homepage": "http://semweb.mmlab.be/ns/tincan2prov/homepage",
+    "id": "http://semweb.mmlab.be/ns/tincan2prov/id",
+    "name": "http://semweb.mmlab.be/ns/tincan2prov/name",
+    "object": "http://semweb.mmlab.be/ns/tincan2prov/object",
+    "stored": "http://semweb.mmlab.be/ns/tincan2prov/stored",
+    "timestamp": "http://semweb.mmlab.be/ns/tincan2prov/timestamp",
+    "verb": "http://semweb.mmlab.be/ns/tincan2prov/verb",
+    "version": "http://semweb.mmlab.be/ns/tincan2prov/version"
+  },
+  "@graph": [
+    {
+      "@id": "http://localhost:8001/b1/t1/5fecbed0-8cac-4a2c-be04-ee85f4e3f2ce",
+      "@type": [
+        "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+        "http://localhost:8001/b1/m1#xapiStatement"
+      ],
+      "actor": {
+        "@id": "_:b0",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "http://xmlns.com/foaf/0.1/mbox": {
+          "@language": "en",
+          "@value": "mailto:auto_tests@example.scorm.com"
+        },
+        "name": {
+          "@language": "en",
+          "@value": "Auto Test Learner"
+        }
+      },
+      "authority": {
+        "@id": "_:b1",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "account": {
+          "@id": "_:b2",
+          "http://semweb.mmlab.be/ns/tincan2prov/homePage": {
+            "@type": "http://xmlns.com/foaf/0.1/Document",
+            "@value": "http://cloud.scorm.com/"
+          },
+          "name": {
+            "@language": "en",
+            "@value": "anonymous"
+          }
+        }
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425585271021"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-05T19:54:31.021000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425585271021"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-05T19:54:31.021000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": {
+        "@id": "http://localhost:8001/b1/t1/"
+      },
+      "http://semweb.mmlab.be/ns/tincan2prov/context": {
+        "@id": "_:b3",
+        "http://semweb.mmlab.be/ns/tincan2prov/contextActivities": {
+          "@id": "_:b4",
+          "http://semweb.mmlab.be/ns/tincan2prov/grouping": {
+            "@id": "_:b6",
+            "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+            "id": "tag:adlnet.gov,2013:expapi:0.9:activities:scorm.com/GolfExample_TCAPI"
+          },
+          "http://semweb.mmlab.be/ns/tincan2prov/other": {
+            "@id": "_:b7",
+            "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+            "id": "tag:adlnet.gov,2013:expapi:0.9:activities:com.scorm.golfsamples.context_other"
+          },
+          "http://semweb.mmlab.be/ns/tincan2prov/parent": {
+            "@id": "_:b8",
+            "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+            "id": "tag:adlnet.gov,2013:expapi:0.9:activities:scorm.com/GolfExample_TCAPI/GolfAssessment.html"
+          }
+        }
+      },
+      "http://semweb.mmlab.be/ns/tincan2prov/result": {
+        "@id": "_:b5",
+        "http://semweb.mmlab.be/ns/tincan2prov/response": {
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "@value": "USGA"
+        },
+        "http://semweb.mmlab.be/ns/tincan2prov/success": {
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+          "@value": "true"
+        }
+      },
+      "id": "5fecbed0-8cac-4a2c-be04-ee85f4e3f2ce",
+      "object": {
+        "@id": "tag:adlnet.gov,2013:expapi:0.9:activities:com.scorm.golfsamples.interactions.playing_1",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+      },
+      "stored": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-05T19:54:31.021000+00:00"
+      },
+      "timestamp": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-05T19:54:31.021000+00:00"
+      },
+      "verb": {
+        "@id": "http://adlnet.gov/expapi/verbs/answered",
+        "display": {
+          "@language": "en-us",
+          "@value": "answered"
+        }
+      },
+      "version": "1.0.0"
+    }
+  ]
+}

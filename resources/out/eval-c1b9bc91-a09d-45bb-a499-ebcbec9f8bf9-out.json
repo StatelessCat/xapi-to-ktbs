@@ -1,0 +1,10 @@
+[
+  {
+    "@id": "_:f79bada11b2ac4877afa2fef063ad2b73b8",
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment.html"
+      }
+    ]
+  }
+]

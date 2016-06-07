@@ -1,0 +1,237 @@
+[
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b1",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "Test User"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@language": "en",
+        "@value": "mailto:test@beta.projecttincan.com"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b2",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/account": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b9"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b3",
+    "http://semweb.mmlab.be/ns/tincan2prov/contextActivities": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b6"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b4",
+    "http://semweb.mmlab.be/ns/tincan2prov/response": [
+      {
+        "@type": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "@value": "3"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/success": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+        "@value": "false"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b5",
+    "http://semweb.mmlab.be/ns/tincan2prov/correctResponsesPattern": [
+      {
+        "@value": "2"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/description": [
+      {
+        "@language": "en-us",
+        "@value": "Golfer A has a course handicap of 3. Golfer B has a course handicap of 28. On the 6th handicap hole, how many strokes will Golfer A have to give Golfer B in match play?"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/interactionType": [
+      {
+        "@value": "numeric"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/type": [
+      {
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+        "@value": "http://adlnet.gov/expapi/activities/cmi.interaction"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b6",
+    "http://semweb.mmlab.be/ns/tincan2prov/grouping": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b7"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/parent": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b8"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b7",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "http://tincanapi.com/GolfExample_TCAPI"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b8",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment.html"
+      }
+    ]
+  },
+  {
+    "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b9",
+    "http://semweb.mmlab.be/ns/tincan2prov/homePage": [
+      {
+        "@type": "http://xmlns.com/foaf/0.1/Document",
+        "@value": "http://cloud.scorm.com/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "anonymous"
+      }
+    ]
+  },
+  {
+    "@id": "http://adlnet.gov/expapi/verbs/answered",
+    "http://semweb.mmlab.be/ns/tincan2prov/display": [
+      {
+        "@language": "und",
+        "@value": "answered"
+      }
+    ]
+  },
+  {
+    "@id": "http://localhost:8001/b1/t1/6543bf80-2819-40a8-bf7e-064d9b9f4800",
+    "@type": [
+      "http://localhost:8001/b1/m1#xapiStatement",
+      "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425605344103"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T01:29:04.103000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425605344103"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T01:29:04.103000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": [
+      {
+        "@id": "http://localhost:8001/b1/t1/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/actor": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b1"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/authority": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b2"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/context": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b3"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "6543bf80-2819-40a8-bf7e-064d9b9f4800"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/object": [
+      {
+        "@id": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment/interactions.handicap_4"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/result": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b4"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/stored": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T01:29:05.803000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/timestamp": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T01:29:04.103000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/verb": [
+      {
+        "@id": "http://adlnet.gov/expapi/verbs/answered"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/version": [
+      {
+        "@value": "1.0.0"
+      }
+    ]
+  },
+  {
+    "@id": "http://tincanapi.com/GolfExample_TCAPI/GolfAssessment/interactions.handicap_4",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/definition": [
+      {
+        "@id": "_:f8acfa6cc67a54cfc99cd0df89b07bce1b5"
+      }
+    ]
+  }
+]

@@ -1,0 +1,153 @@
+[
+  {
+    "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab1",
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en-us",
+        "@value": "Solo Hang Gliding"
+      }
+    ]
+  },
+  {
+    "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab2",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "Sally2 Glider"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@language": "en",
+        "@value": "mailto:sally2@example.com"
+      }
+    ]
+  },
+  {
+    "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab3",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Agent"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/account": [
+      {
+        "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab4"
+      }
+    ]
+  },
+  {
+    "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab4",
+    "http://semweb.mmlab.be/ns/tincan2prov/homePage": [
+      {
+        "@type": "http://xmlns.com/foaf/0.1/Document",
+        "@value": "http://cloud.scorm.com/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/name": [
+      {
+        "@language": "en",
+        "@value": "anonymous"
+      }
+    ]
+  },
+  {
+    "@id": "http://adlnet.gov/expapi/verbs/experienced",
+    "http://semweb.mmlab.be/ns/tincan2prov/display": [
+      {
+        "@language": "en-us",
+        "@value": "experienced"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.com/activities/solo-hang-gliding",
+    "@type": [
+      "http://semweb.mmlab.be/ns/tincan2prov/Activity"
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/definition": [
+      {
+        "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab1"
+      }
+    ]
+  },
+  {
+    "@id": "http://localhost:8001/b1/t1/be3ece5e-477b-4f02-be8e-5badb5ca9873",
+    "@type": [
+      "http://localhost:8001/b1/m1#xapiStatement",
+      "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422753072203"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-02-01T01:11:12.203000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1422753072203"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-02-01T01:11:12.203000+00:00"
+      }
+    ],
+    "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": [
+      {
+        "@id": "http://localhost:8001/b1/t1/"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/actor": [
+      {
+        "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab2"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/authority": [
+      {
+        "@id": "_:fa297e4caf59849d0abb7a84cfd0172aab3"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/id": [
+      {
+        "@value": "be3ece5e-477b-4f02-be8e-5badb5ca9873"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/object": [
+      {
+        "@id": "http://example.com/activities/solo-hang-gliding"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/stored": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-02-01T01:11:12.203000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/timestamp": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-02-01T01:11:12.203000+00:00"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/verb": [
+      {
+        "@id": "http://adlnet.gov/expapi/verbs/experienced"
+      }
+    ],
+    "http://semweb.mmlab.be/ns/tincan2prov/version": [
+      {
+        "@value": "1.0.0"
+      }
+    ]
+  }
+]

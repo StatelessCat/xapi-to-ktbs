@@ -1,0 +1,154 @@
+{
+  "@context": {
+    "account": "http://semweb.mmlab.be/ns/tincan2prov/account",
+    "actor": "http://semweb.mmlab.be/ns/tincan2prov/actor",
+    "authority": "http://semweb.mmlab.be/ns/tincan2prov/authority",
+    "definition": "http://semweb.mmlab.be/ns/tincan2prov/definition",
+    "display": "http://semweb.mmlab.be/ns/tincan2prov/display",
+    "homepage": "http://semweb.mmlab.be/ns/tincan2prov/homepage",
+    "id": "http://semweb.mmlab.be/ns/tincan2prov/id",
+    "name": "http://semweb.mmlab.be/ns/tincan2prov/name",
+    "object": "http://semweb.mmlab.be/ns/tincan2prov/object",
+    "stored": "http://semweb.mmlab.be/ns/tincan2prov/stored",
+    "timestamp": "http://semweb.mmlab.be/ns/tincan2prov/timestamp",
+    "verb": "http://semweb.mmlab.be/ns/tincan2prov/verb",
+    "version": "http://semweb.mmlab.be/ns/tincan2prov/version"
+  },
+  "@graph": [
+    {
+      "@id": "http://localhost:8001/b1/t1/02abc888-2672-45bb-8256-f01efdda6660",
+      "@type": [
+        "http://semweb.mmlab.be/ns/tincan2prov/Statement",
+        "http://localhost:8001/b1/m1#xapiStatement"
+      ],
+      "actor": {
+        "@id": "_:b0",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "account": {
+          "@id": "_:b1",
+          "http://semweb.mmlab.be/ns/tincan2prov/homePage": {
+            "@type": "http://xmlns.com/foaf/0.1/Document",
+            "@value": "http://localhost/"
+          },
+          "name": {
+            "@language": "en",
+            "@value": "321123"
+          }
+        }
+      },
+      "authority": {
+        "@id": "_:b4",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+        "account": {
+          "@id": "_:b5",
+          "http://semweb.mmlab.be/ns/tincan2prov/homePage": {
+            "@type": "http://xmlns.com/foaf/0.1/Document",
+            "@value": "http://cloud.scorm.com/"
+          },
+          "name": {
+            "@language": "en",
+            "@value": "anonymous"
+          }
+        }
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBegin": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425641410803"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasBeginDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T11:30:10.803000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEnd": {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1425641410803"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasEndDT": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T11:30:10.803000+00:00"
+      },
+      "http://liris.cnrs.fr/silex/2009/ktbs#hasTrace": {
+        "@id": "http://localhost:8001/b1/t1/"
+      },
+      "id": "02abc888-2672-45bb-8256-f01efdda6660",
+      "object": {
+        "@id": "_:b6",
+        "@type": "http://semweb.mmlab.be/ns/tincan2prov/SubStatement",
+        "actor": {
+          "@id": "_:b7",
+          "@type": "http://semweb.mmlab.be/ns/tincan2prov/Agent",
+          "account": {
+            "@id": "_:b3",
+            "http://semweb.mmlab.be/ns/tincan2prov/homePage": {
+              "@type": "http://xmlns.com/foaf/0.1/Document",
+              "@value": "http://localhost/"
+            },
+            "name": {
+              "@language": "en",
+              "@value": "321123"
+            }
+          }
+        },
+        "http://semweb.mmlab.be/ns/tincan2prov/context": {
+          "@id": "_:b8",
+          "http://semweb.mmlab.be/ns/tincan2prov/contextActivities": {
+            "@id": "_:b2",
+            "http://semweb.mmlab.be/ns/tincan2prov/category": {
+              "@id": "http://www.axelos.com/schema/1.0/categories/passivecommunity",
+              "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+              "definition": {
+                "@id": "_:b10",
+                "name": {
+                  "@language": "en-gb",
+                  "@value": "Passive Community"
+                }
+              }
+            }
+          }
+        },
+        "object": {
+          "@id": "http://www.axelos.com/schema/1.0/activity/Test%20Four",
+          "@type": "http://semweb.mmlab.be/ns/tincan2prov/Activity",
+          "definition": {
+            "@id": "_:b9",
+            "http://semweb.mmlab.be/ns/tincan2prov/description": {
+              "@language": "en-gb",
+              "@value": ""
+            },
+            "name": {
+              "@language": "en-gb",
+              "@value": "Test Four"
+            }
+          }
+        },
+        "timestamp": {
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "@value": "2015-03-11T00:00:00+00:00"
+        },
+        "verb": {
+          "@id": "http://adlnet.gov/expapi/verbs/experienced",
+          "display": {
+            "@language": "en-gb",
+            "@value": "Experienced"
+          }
+        }
+      },
+      "stored": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T12:34:19.277000+00:00"
+      },
+      "timestamp": {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2015-03-06T11:30:10.803000+00:00"
+      },
+      "verb": {
+        "@id": "http://www.tincanapi.co.uk/pages/verbs.html#planned_learning",
+        "display": {
+          "@language": "en-gb",
+          "@value": "Planned"
+        }
+      },
+      "version": "1.0.1"
+    }
+  ]
+}
