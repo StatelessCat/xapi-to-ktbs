@@ -1,12 +1,14 @@
 {
   "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement",
-  "@context": {
-    "verb" : {
-      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/verb"
-    },
-    "display" : {
-      "@id" : "http://semweb.mmlab.be/ns/tincan2prov/display",
-      "@container" : "@language"
-    }
-  }
+  "@context": [
+    "https://raw.githubusercontent.com/StatelessCat/xapi-to-ktbs/master/resources/tincan2prov/tincan2prov.jsonld",
+    {
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "verb" : {
+        "@id" : "http://semweb.mmlab.be/ns/tincan2prov/verb"
+      },
+      "account" : {
+        "@id" : "http://semweb.mmlab.be/ns/tincan2prov/account"
+      }
+    }]
 }
