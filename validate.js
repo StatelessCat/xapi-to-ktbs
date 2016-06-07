@@ -6,8 +6,6 @@ const fs = require('fs');
 var jsonld = require('jsonld');
 const deterministic_stringify = require('json-stable-stringify');
 
-var n3parser = N3.Parser();
-
 const FRAME_PATH = './resources/framing/frame.json';
 var frame_str = fs.readFileSync(FRAME_PATH, 'utf8');
 var frame_ = JSON.parse(frame_str);
