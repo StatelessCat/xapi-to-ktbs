@@ -16,6 +16,7 @@ var xapi_context = JSON.parse(xapi_context_str);
 
 const OUT_PATH = './resources/out/';
 const OUT_FRAMED_PATH = './resources/out-framed/';
+const OUT_FRAMED_NORMALIZED_PATH = './resources/out-framed-normalized/';
 
 new Promise(function(resolve, reject) {
   http.get({
@@ -110,9 +111,16 @@ new Promise(function(resolve, reject) {
             if (err) throw err;
           });
           jsonld.frame(doc, frame_, function(err, framed) {
-            const out_framed_filename = OUT_FRAMED_PATH + 'eval-' + statement_id + '-out-framed.json';
-            fs.writeFile(out_framed_filename, deterministic_stringify(framed, {space: 2}), (err) => {
-              if (err) throw err;
+            jsonld.normalize(doc, {
+              algorithm: 'URDNA2015',
+              format: 'application/nquads'
+            }, function(err, normalized) {
+              const out_framed__normalized_filename = OUT_FRAMED_NORMALIZED_PATH + 'eval-' + statement_id + '-out-framed-normalized.json';
+              fs.writeFile(out_framed__normalized_filename, normalized, (err) => {
+                if (err) throw err;
+              });
+              // normalized is a string that is a canonical representation of the document
+              // that can be used for hashing, comparison, etc.
             });
           });
         });
