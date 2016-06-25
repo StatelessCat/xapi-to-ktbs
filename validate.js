@@ -111,17 +111,20 @@ new Promise(function(resolve, reject) {
             if (err) throw err;
           });
           jsonld.frame(doc, frame_, function(err, framed) {
-            jsonld.normalize(doc, {
-              algorithm: 'URDNA2015',
-              format: 'application/nquads'
-            }, function(err, normalized) {
-              const out_framed__normalized_filename = OUT_FRAMED_NORMALIZED_PATH + 'eval-' + statement_id + '-out-framed-normalized.n3';
-              fs.writeFile(out_framed__normalized_filename, normalized, (err) => {
-                if (err) throw err;
+            if (framed['@graph'][0]) {
+              delete framed['@graph'][0]['@id'];
+              jsonld.normalize(framed, {
+                algorithm: 'URDNA2015',
+                format: 'application/nquads'
+              }, function (err, normalized) {
+                const out_framed__normalized_filename = OUT_FRAMED_NORMALIZED_PATH + 'eval-' + statement_id + '-out-framed-normalized.n3';
+                fs.writeFile(out_framed__normalized_filename, normalized, (err) => {
+                  if (err) throw err;
+                });
+                // normalized is a string that is a canonical representation of the document
+                // that can be used for hashing, comparison, etc.
               });
-              // normalized is a string that is a canonical representation of the document
-              // that can be used for hashing, comparison, etc.
-            });
+            }
           });
         });
       });
