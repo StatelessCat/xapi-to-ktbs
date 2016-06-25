@@ -48,7 +48,7 @@ Create output directories:
     ./resources/in-normalized && \
     ./resources/out && \
     ./resources/out-framed && \
-    ./resources/out-framed-normalized && \
+    ./resources/out-framed-normalized
  ```
 
 Launch the parsing of xAPI statements and send them to the kTBS:
@@ -68,7 +68,8 @@ Make the validation script executable and run it:
 ## Results
 Those steps produce documents with the same shape as the original xAPI statements and no information loss, so we can claim that the round trip succeeds.
 
-## Raw Results    
+## Raw Results
+
 ```
 /usr/bin/env bash /home/raphael/code/xapi-to-ktbs/validate.sh
 -------
