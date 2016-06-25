@@ -42,7 +42,8 @@ Keep the kTBS running during the next steps.
 
 Create output directories: 
 
- ```mkdir \ 
+ ```
+ mkdir \ 
     ./resources/framing && \
     ./resources/in  && \
     ./resources/in-normalized && \
