@@ -6,7 +6,7 @@
   
 # Setup
 
-## Installing a kTBS development version and checkout on the branch that implement the new MTMM 
+## Install a kTBS development version and checkout on the branch that implement the new MTMM 
 I assume python2 is correctly installed on your machine.
 
 ```$ virtualenv ktbs-env-dev```
@@ -31,17 +31,24 @@ If something didnt work, please follow these steps: http://kernel-for-trace-base
 
 ## Retrieving the dependencies of this project
 
-  ```npm install```
+I assume Node.js is correctly installed on your machine.
+
+On the root directory of this project:
+```npm install```
   
 ## Launch the benchmarking
+Go to the kTBS directory.
 ```$ cd ktbs-env-dev```
 
+Activate the virtualenv.
+```source bin/activate```
+
+Launch the kTBS server.
 ```$ ktbs```
 
-Keep the kTBS running during the next steps.
+Please keep the kTBS running during the next steps.
 
-Create output directories: 
-
+On the root directory of this project, create output directories: 
  ```
  mkdir \ 
     ./resources/framing && \
@@ -53,17 +60,13 @@ Create output directories:
  ```
 
 Launch the parsing of xAPI statements and send them to the kTBS:
-
  ```$ node index```
+You will see some POST requests.
  
- You will see some POST requests.
- 
-Lauch the second part of the round-trip: 
-
+Launch the second part of the round-trip: 
  ```$ node validate```
  
 Make the validation script executable and run it: 
-
 ```$ chmod u+x validate.sh && bash validate.sh```
 
 ## Results
