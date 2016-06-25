@@ -6,28 +6,36 @@
   
 # Setup
 
-## Install a kTBS development version and checkout on the branch that implement the new MTMM 
+## Install a kTBS development version and checkout on the branch that implements the new MTMM 
 I assume python2 is correctly installed on your machine.
 
+Create an isolated Python environment:
 ```$ virtualenv ktbs-env-dev```
 
+Go to the directory of the isolated Python environment (created with the previous command):
 ```$ cd ktbs-env-dev/```
 
+Go to the isolated Python environment (This will change your $PATH so its first entry is the virtualenv’s bin/ directory.):
 ```$ source bin/activate```
 
+Clone the latest developer version of the kTBS:
 ```git clone https://github.com/ktbs/ktbs.git```
 
+Go to the source code:
 ```cd ktbs```
 
+Checkout on the branch that implements the new MTMM:
 ```git checkout raphael```
+Or 
+```git checkout b94db6b4cb1cee94a71381d17aa81e520b980aa8```
 
+Go to the `ktbs-env-dev/` directory
 ```cd ..```
 
+Install kTBS from source:
 ```pip install -e ktbs/```
 
-```pip install -r requirements.d/dev.txt```
-
-If something didnt work, please follow these steps: http://kernel-for-trace-based-systems.readthedocs.io/en/latest/tutorials/install/install-ktbs-dev-version.html
+If something didn't work, please follow these steps: http://kernel-for-trace-based-systems.readthedocs.io/en/latest/tutorials/install/install-ktbs-dev-version.html
 
 ## Retrieving the dependencies of this project
 
