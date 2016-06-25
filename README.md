@@ -1,4 +1,4 @@
-# Experimental evaluation which is part of my master thesis about interoperability among trace formalisms.
+# Experimental evaluation which is part of my master thesis on interoperability among trace formalisms.
   This repository contains a Node.js implementation of a round-trip from xAPI statements to kTBS obsels.
   
 # Credits 
@@ -10,26 +10,38 @@
 I assume python2 is correctly installed on your machine.
 
 ```$ virtualenv ktbs-env-dev```
+
 ```$ cd ktbs-env-dev/```
+
 ```$ source bin/activate```
+
 ```git clone https://github.com/ktbs/ktbs.git```
+
 ```cd ktbs```
+
 ```git checkout raphael```
+
 ```cd ..```
+
 ```pip install -e ktbs/```
+
 ```pip install -r requirements.d/dev.txt```
 
 If something didnt work, please follow these steps: http://kernel-for-trace-based-systems.readthedocs.io/en/latest/tutorials/install/install-ktbs-dev-version.html
 
 ## Retrieving the dependencies of this project
-  `npm install`
+
+  ```npm install```
   
 ## Launch the benchmarking
 ```$ cd ktbs-env-dev```
+
 ```$ ktbs```
+
 Keep the kTBS running during the next steps.
 
 Create output directories: 
+
  ```mkdir \ 
     ./resources/framing && \
     ./resources/in  && \
@@ -40,13 +52,17 @@ Create output directories:
  ```
 
 Launch the parsing of xAPI statements and send them to the kTBS:
+
  ```$ node index```
+ 
  You will see some POST requests.
  
 Lauch the second part of the round-trip: 
+
  ```$ node validate```
  
 Make the validation script executable and run it: 
+
 ```$ chmod u+x validate.sh && bash validate.sh```
 
 ## Results
