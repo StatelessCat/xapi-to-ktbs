@@ -1,3 +1,7 @@
 *.*~
 node_modules/
 .idea
+resources/out/
+resources/out-framed/
+resources/in
+resources/out-framed-normalized/
