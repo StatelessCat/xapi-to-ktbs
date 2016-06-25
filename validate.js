@@ -110,10 +110,13 @@ new Promise(function(resolve, reject) {
             if (err) throw err;
           });
           jsonld.frame(doc, frame_, function(err, framed) {
-            const out_framed_filename = OUT_FRAMED_PATH + 'eval-' + statement_id + '-out-framed.json';
-            fs.writeFile(out_framed_filename, deterministic_stringify(framed, {space: 2}), (err) => {
-              if (err) throw err;
-            });
+            if (framed['@graph']) {
+              const statement = framed['@graph'][0];
+              const out_framed_filename = OUT_FRAMED_PATH + 'eval-' + statement_id + '-out-framed.json';
+              fs.writeFile(out_framed_filename, deterministic_stringify(statement, {space: 2}), (err) => {
+                if (err) throw err;
+              });
+            }
           });
         });
       });
