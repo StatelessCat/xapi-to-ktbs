@@ -115,7 +115,7 @@ new Promise(function(resolve, reject) {
               algorithm: 'URDNA2015',
               format: 'application/nquads'
             }, function(err, normalized) {
-              const out_framed__normalized_filename = OUT_FRAMED_NORMALIZED_PATH + 'eval-' + statement_id + '-out-framed-normalized.json';
+              const out_framed__normalized_filename = OUT_FRAMED_NORMALIZED_PATH + 'eval-' + statement_id + '-out-framed-normalized.n3';
               fs.writeFile(out_framed__normalized_filename, normalized, (err) => {
                 if (err) throw err;
               });

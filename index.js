@@ -2,10 +2,12 @@
 const fs = require('fs');
 const ktbs = require('./lib/ktbs');
 const evparser = require('./lib/evparser');
+var jsonld = require('jsonld');
 
 const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
 // const SPARQL_TRANS_PATH = './resources/trans.rq'; // TODO use me
 const SPARQL_TRANS_PATH_TEST = './resources/trans-test.ttl';
+const IN_NORMALIZED_PATH = './resources/in-normalized/';
 
 const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
 // const rq = fs.readFileSync(SPARQL_TRANS_PATH, 'utf8'); // TODO use me
@@ -49,6 +51,19 @@ statements.filter(function(st) {
   // TODO check the second one
 }).forEach(function(statement) {
   const ss1 = statement;
+
+  jsonld.normalize(ss1, {
+    algorithm: 'URDNA2015',
+    format: 'application/nquads'
+  }, function(err, normalized) {
+    const in_normalized_filename = IN_NORMALIZED_PATH + 'eval-' + ss1.id + '-in-normalized.n3';
+    fs.writeFile(in_normalized_filename, normalized, (err) => {
+      if (err) throw err;
+    });
+    // normalized is a string that is a canonical representation of the document
+    // that can be used for hashing, comparison, etc.
+  });
+
   var ss2 = JSON.parse(JSON.stringify(ss1)); // TODO fix quick/dirty cloning
   ss2["@id"] = ss1.id;
   ss2["@type"] = ["m:xapiStatement", ss1["@type"]];
