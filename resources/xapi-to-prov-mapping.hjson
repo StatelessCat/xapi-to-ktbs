@@ -1,0 +1,10 @@
+[
+{
+  xapi: http://semweb.mmlab.be/ns/tincan2prov/actor
+  prov: http://www.w3.org/ns/prov#Agent
+}
+{
+  xapi: http://semweb.mmlab.be/ns/tincan2prov/object
+  prov: http://www.w3.org/ns/prov#Entity
+}
+]
