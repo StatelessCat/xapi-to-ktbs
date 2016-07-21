@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 var Hjson = require('hjson');
+//const ktbs = require('./lib/ktbs');
+const http = require('http');
 const fs = require('fs');
 
 var computed_trace_uri = process.argv[2] || 'prov_trace42/';
@@ -30,12 +32,40 @@ var x = mapping_array.map(({xapi, prov}) => "\""+xapi+"\": \""+prov+"\"");
 let map = "map={" + x.join(",") + "}";
 let model = "model=" + computed_trace_model_uri;
 let parameter = [model, map];
-console.log(parameter);
+// console.log(parameter);
 
 // add it to the transformation object litteral
 transformation.parameter = parameter;
+let payload = JSON.stringify(transformation);
 
 // send the transformation to the kTBS
-console.log(JSON.stringify(transformation, null, 2));
+var options = {
+  hostname: 'localhost',
+  port: 8001,
+  path: '/b1/',
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Content-Length': Buffer.byteLength(payload)
+  }
+};
+var req = http.request(options, (res) => {
+  console.log(`STATUS: ${res.statusCode}`);
+  console.log(`HEADERS: ${JSON.stringify(res.headers)}`);
+  res.setEncoding('utf8');
+  res.on('data', (chunk) => {
+    console.log(`BODY: ${chunk}`);
+  });
+  res.on('end', () => {
+    console.log('No more data in response.');
+  });
+});
 
+req.on('error', (e) => {
+  console.log(`problem with request: ${e.message}`);
+});
+
+// write data to request body
+req.write(payload);
+req.end();
 
