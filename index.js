@@ -59,32 +59,22 @@ statements.filter(function(st) {
     fs.writeFile(in_normalized_filename, normalized, (err) => {
       if (err) throw err;
     });
-    // normalized is a string that is a canonical representation of the document
-    // that can be used for hashing, comparison, etc.
   });
 
-  var ss2 = JSON.parse(JSON.stringify(ss1)); // TODO fix quick/dirty cloning
-  ss2["@id"] = ss1.id;
-  ss2["@type"] = ["m:xapiStatement", ss1["@type"]];
-  // ^ TODO handle the case of ss1["@type"] is an array
-  ss2["hasTrace"] = "./";
-  ss2["beginDT"] = ss2.timestamp;
-  ss2["endDT"] = ss2.timestamp;
-  ss2["@context"] = [
-    "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
-    ss1["@context"],
-    { "m": "http://localhost:8001/b1/m1#" }
-  ];
-  // Note the order of @context declarations
-  //  ktbs context must be specified before the tincan2prov one
-  ktbs.postObsel({
-    path: '/b1/t1/',
-    payload: JSON.stringify(ss2),
-    headers: {'Content-Type': 'application/ld+json'}
-  });
+  ktbs.to_obsels({
+    "statement": ss1,
+    "id": ss1.id
+  }).then(st => {
+    ktbs.postObsel({
+      path: '/b1/t1/',
+      payload: JSON.stringify(st),
+      headers: {'Content-Type': 'application/ld+json'}
+    });
+  }).catch(error => { console.log(error); });
 });
 
 ktbs.postComputedTrace({
   payload: trans_test
 });
+
 
