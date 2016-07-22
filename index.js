@@ -6,7 +6,6 @@ const evparser = require('./lib/evparser');
 var jsonld = require('jsonld');
 
 const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
-// const SPARQL_TRANS_PATH = './resources/trans.rq'; // TODO use me
 const SPARQL_TRANS_PATH_TEST = './resources/trans-test.ttl';
 const IN_NORMALIZED_PATH = './resources/in-normalized/';
 

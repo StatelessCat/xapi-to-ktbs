@@ -1,17 +1,26 @@
 {
-    "actor": {
-        "mbox": "mailto:alice@ex.co",
-        "objectType": "Agent"
-    },
-    "verb": {
-        "id": "http://adlnet.gov/expapi/verbs/initialized",
-        "display": {
-            "en-US": "initialized"
-        }
-    },
-    "object": {
-        "id": "http://ex.co/activity",
-        "objectType": "Activity"
-    }
+ "id": "64ec68b8-3118-41cb-9412-3b675cf35af2",
+ "actor": {
+  "mbox": "mailto:alice@ex.co",
+  "objectType": "Agent"
+ },
+ "verb": {
+  "id": "http://adlnet.gov/expapi/verbs/initialized",
+  "display": {
+   "en-US": "initialized"
+  },
+  "@context": {
+   "id": "@id"
+  }
+ },
+ "object": {
+  "id": "http://ex.co/activity",
+  "objectType": "Activity",
+  "@context": {
+   "id": "@id"
+  }
+ },
+ "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+ "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement"
 }
 
