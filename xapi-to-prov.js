@@ -25,11 +25,11 @@ const transformation = {
   "hasMethod": "k:translation"
 };
 
-// format parameters to something like   "parameter": [
-//    "model=http://localhost:8001/b1/nomodel",
-//    "map={\"http://semweb.mmlab.be/ns/tincan2prov/actor\": \"http://www.w3.org/ns/prov#Agent\",\"http://semweb.mmlab.be/ns/tincan2prov/object\": \"http://www.w3.org/ns/prov#Entity\"}"
-//  ]
-var x = mapping_array.map(({xapi, prov}) => "\""+xapi+"\": \""+prov+"\"");
+var x = mapping_array.map(({xapi, prov}) => {
+  let x = "http://semweb.mmlab.be/ns/tincan2prov/" + xapi;
+  let p = "http://www.w3.org/ns/prov#" + prov;
+  return "\""+x+"\": \""+p+"\"";
+});
 let map = "map={" + x.join(",") + "}";
 let model = "model=" + computed_trace_model_uri;
 let parameter = [model, map];

@@ -1,18 +1,14 @@
 [
 {
-  xapi: http://semweb.mmlab.be/ns/tincan2prov/actor
-  prov: http://www.w3.org/ns/prov#wasAssociatedWith
+  xapi: actor
+  prov: wasAssociatedWith
 }
 {
-  xapi: http://semweb.mmlab.be/ns/tincan2prov/Agent
-  prov: http://www.w3.org/ns/prov#Agent
+  xapi: object
+  prov: used
 }
 {
-  xapi: http://semweb.mmlab.be/ns/tincan2prov/object
-  prov: http://www.w3.org/ns/prov#used
-}
-{
-  xapi: http://semweb.mmlab.be/ns/tincan2prov/result
-  prov: http://www.w3.org/ns/prov#
+  xapi: Agent
+  prov: Agent
 }
 ]
