@@ -10,7 +10,6 @@ const SPARQL_TRANS_PATH_TEST = './resources/trans-test.ttl';
 const IN_NORMALIZED_PATH = './resources/in-normalized/';
 
 const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
-// const rq = fs.readFileSync(SPARQL_TRANS_PATH, 'utf8'); // TODO use me
 const trans_test = fs.readFileSync(SPARQL_TRANS_PATH_TEST, 'utf8');
 
 const statements = evparser.statements;
