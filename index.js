@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/*globals Promise:true*/
 const fs = require('fs');
 const ktbs = require('./lib/ktbs');
 const evparser = require('./lib/evparser');
@@ -13,13 +14,13 @@ const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
 const trans_test = fs.readFileSync(SPARQL_TRANS_PATH_TEST, 'utf8');
 
 const statements = evparser.statements;
-const fus_statement = evparser.fusionned;
 
-Promise.all([
-  ktbs.deleteX({path: '/b1/joinRelated1/'}),
-  ktbs.deleteX({path: '/b1/m1'}),
-  ktbs.deleteX({path: '/b1/t1/'})
-])
+Promise
+  .all([
+    ktbs.deleteX({path: '/b1/joinRelated1/'}),
+    ktbs.deleteX({path: '/b1/m1'}),
+    ktbs.deleteX({path: '/b1/t1/'})
+  ])
   .then(([res1, res2, res3]) => {
     console.log("les deletes sont finis", res1, res2, res3);
     return ktbs.deleteX({path: '/b1/'});
@@ -43,38 +44,43 @@ Promise.all([
     });
   })
   .then(() => {
-    statements.filter(function(st) {
+    
+    var promise_array = statements.filter(function(st) {
       return st['id'] !== 'f590683e-c87e-4b0c-96d9-d5f7c312a4b2' &&
         st['id'] !== '935e030d-1af6-4415-9106-864f2d682ffa' ;
       // first one seems to be a malformed statement, TODO check the second
-    }).forEach(function(statement) {
-      const ss1 = statement;
+    }).map(function(statement) {
       
-      jsonld.normalize(ss1, {
+      jsonld.normalize(statement, {
         algorithm: 'URDNA2015',
         format: 'application/nquads'
       }, function(err, normalized) {
-        const in_normalized_filename = IN_NORMALIZED_PATH + 'eval-' + ss1.id + '-in-normalized.n3';
+        const in_normalized_filename = IN_NORMALIZED_PATH + 'eval-' + statement.id + '-in-normalized.n3';
         fs.writeFile(in_normalized_filename, normalized, (err) => {
           if (err) throw err;
         });
       });
       
-      ktbs.to_obsels({
-        "statement": ss1,
-        "id": ss1.id
-      }).then(st => {
-        ktbs.postObsel({
-          path: '/b1/t1/',
-          payload: JSON.stringify(st),
-          headers: {'Content-Type': 'application/ld+json'}
-        });
-      }).catch(error => { console.log(error); });
+      return ktbs.to_obsels({
+        "statement": statement,
+        "id": statement.id
+      });
     });
-    
+    return Promise.all(promise_array);
+  })
+  .then((obsel_array) => {
+    return Promise.all(obsel_array.map((st)=> {
+      return ktbs.postObsel({
+        path: '/b1/t1/',
+        payload: JSON.stringify(st),
+        headers: {'Content-Type': 'application/ld+json'}
+      });      
+    }));
+  })
+  .then(() => {
     ktbs.postComputedTrace({
       payload: trans_test
-    });    
+    });
   })
   .catch(err => {
     console.log(err);
