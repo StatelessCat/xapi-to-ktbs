@@ -4,8 +4,9 @@ var Hjson = require('hjson');
 const http = require('http');
 const fs = require('fs');
 
-var computed_trace_uri = process.argv[2] || 'prov_trace42/';
-var computed_trace_model_uri = process.argv[3] || 'http://localhost:8001/b1/nomodel';
+var source_trace_uri = process.argv[2] || 't1/';
+var computed_trace_uri = process.argv[3] || 'prov_trace42/';
+var computed_trace_model_uri = process.argv[4] || 'http://localhost:8001/b1/nomodel';
 
 if (!process.argv[2]) {
   console.log('node xapi-to-prov.js <computed trace URI>');
@@ -20,7 +21,7 @@ const mapping_array = Hjson.parse(mapping_hjson);
 const transformation = {
   "@id": computed_trace_uri,
   "@type": "ComputedTrace",
-  "hasSource": [ "t1/" ],
+  "hasSource": [ source_trace_uri ],
   "hasMethod": "k:translation"
 };
 
