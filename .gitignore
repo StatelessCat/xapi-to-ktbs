@@ -5,3 +5,5 @@ resources/out/
 resources/out-framed/
 resources/in
 resources/out-framed-normalized/
+resources/in-normalized/eval-*.n3
+resources/*#
