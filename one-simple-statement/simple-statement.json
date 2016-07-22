@@ -1,0 +1,17 @@
+{
+    "actor": {
+        "mbox": "mailto:alice@ex.co",
+        "objectType": "Agent"
+    },
+    "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/initialized",
+        "display": {
+            "en-US": "initialized"
+        }
+    },
+    "object": {
+        "id": "http://ex.co/activity",
+        "objectType": "Activity"
+    }
+}
+
