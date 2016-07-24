@@ -4,6 +4,10 @@
   prov: wasAssociatedWith
 }
 {
+  xapi: verb
+  prov: type
+}
+{
   xapi: object
   prov: used
 }
