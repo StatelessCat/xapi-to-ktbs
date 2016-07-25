@@ -1,0 +1,30 @@
+@prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .
+@prefix ns1: <http://semweb.mmlab.be/ns/tincan2prov/> .
+@prefix ns2: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<> a <http://localhost:8001/b1/m1#xapiStatement>,
+        ns1:Statement ;
+    :hasBegin 1469477133673 ;
+    :hasEnd 1469477133673 ;
+    :hasTrace <http://localhost:8001/b1/t1/> ;
+    ns1:actor [ a ns1:Agent ;
+            ns2:mbox "mailto:alice@ex.co"@en ] ;
+    ns1:id "58453caf-c3f1-41dd-a34e-b72b74e74188" ;
+    ns1:object [ a ns1:SubStatement ;
+            ns1:actor [ a ns1:Agent ;
+                    ns2:mbox "mailto:alice@ex.co"@en ] ;
+            ns1:object <http://ex.co/activity> ;
+            ns1:verb <http://adlnet.gov/expapi/verbs/initialized> ] ;
+    ns1:verb <http://adlnet.gov/expapi/verbs/mastered> .
+
+<http://adlnet.gov/expapi/verbs/initialized> ns1:display "initialized"@en-us .
+
+<http://adlnet.gov/expapi/verbs/mastered> ns1:display "mastered"@en-us .
+
+<http://ex.co/activity> a ns1:Activity .
+
