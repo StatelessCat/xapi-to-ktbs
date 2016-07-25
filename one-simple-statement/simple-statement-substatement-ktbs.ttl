@@ -1,0 +1,37 @@
+@prefix : <http://liris.cnrs.fr/silex/2009/ktbs#> .
+@prefix ns1: <http://www.w3.org/ns/prov#> .
+@prefix ns2: <http://xmlns.com/foaf/0.1/> .
+@prefix ns3: <http://semweb.mmlab.be/ns/tincan2prov/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology ;
+   owl:imports <http://www.w3.org/ns/prov-o-20130430>
+ ] .
+
+<http://localhost:8001/b1/p1/58453caf-c3f1-41dd-a34e-b72b74e74188> a <http://localhost:8001/b1/m1#xapiStatement>,
+        ns3:Statement ;
+    :hasBegin 1469441423358 ;
+    :hasEnd 1469441423358 ;
+    :hasSourceObsel <http://localhost:8001/b1/t1/58453caf-c3f1-41dd-a34e-b72b74e74188> ;
+    :hasTrace <http://localhost:8001/b1/p1/> ;
+    ns3:id "58453caf-c3f1-41dd-a34e-b72b74e74188" ;
+    ns1:type <http://adlnet.gov/expapi/verbs/mastered> ;
+    ns1:used <http://667323ff-c238-43ef-ab93-e1db1df68ace> ;
+    ns1:wasAssociatedWith <http://130554a9-b735-4f1d-bdc8-364009b23aed> .
+
+
+<http://130554a9-b735-4f1d-bdc8-364009b23aed> a ns1:Agent ;
+            ns2:mbox "mailto:alice@ex.co"@en .
+            
+<http://667323ff-c238-43ef-ab93-e1db1df68ace> a ns3:SubStatement ;
+            ns1:type <http://adlnet.gov/expapi/verbs/initialized> ;
+            ns1:used <http://ex.co/activity> ;
+            ns1:wasAssociatedWith <http://1fbc6574-8227-4256-bf20-70a71e82580b> .
+
+<http://1fbc6574-8227-4256-bf20-70a71e82580b>  a ns1:Agent ;
+                    ns2:mbox "mailto:alice@ex.co"@en .

@@ -1,0 +1,39 @@
+{
+ "id": "58453caf-c3f1-41dd-a34e-b72b74e74188",
+ "actor": {
+  "mbox": "mailto:alice@ex.co",
+  "objectType": "Agent"
+ },
+ "verb": {
+  "id": "http://adlnet.gov/expapi/verbs/mastered",
+  "display": {
+   "en-US": "mastered"
+  },
+  "@context": {
+   "id": "@id"
+  }
+ },
+ "object": {
+  "actor": {
+   "mbox": "mailto:alice@ex.co",
+   "objectType": "Agent"
+  },
+  "verb": {
+   "id": "http://adlnet.gov/expapi/verbs/initialized",
+   "display": {
+    "en-US": "initialized"
+   }
+  },
+  "object": {
+   "id": "http://ex.co/activity",
+   "objectType": "Activity"
+  },
+  "objectType": "SubStatement",
+  "@context": {
+   "id": "@id"
+  }
+ },
+ "@context": "http://semweb.mmlab.be/ns/tincan2prov/tincan2prov.jsonld",
+ "@type": "http://semweb.mmlab.be/ns/tincan2prov/Statement"
+}
+
