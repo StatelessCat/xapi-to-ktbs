@@ -8,9 +8,9 @@ var source_trace_uri = process.argv[2] || 't1/';
 var computed_trace_uri = process.argv[3] || 'prov_trace42/';
 var computed_trace_model_uri = process.argv[4] || 'http://localhost:8001/b1/nomodel';
 
-if (!process.argv[2]) {
-  console.log('node xapi-to-prov.js <computed trace URI>');
-}
+if (!process.argv[2] || !process.argv[3] || !process.argv[4]) {
+  console.log('node xapi-to-prov.js <source trace> <computed trace URI> <computed trace model>');
+} else {
 
 // read resources/xapi-to-prov-mapping.hjson
 const XAPI_TO_PROV_MAPPING_PATH = './resources/xapi-to-prov-mapping.hjson';
