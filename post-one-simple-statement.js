@@ -1,16 +1,16 @@
 /*globals Promise:true*/
 const fs = require("fs");
-const ktbs = require("../lib/ktbs");
+const ktbs = require("./lib/ktbs");
 
 if (!process.argv[2]) {
   // eslint-disable-next-line no-console
   console.log('node post-one-simple-statement.js <path to the statement>'); 
 } else {
-  const statement_path = 'simple-statement-substatement.json';
+  const statement_path = process.argv[2];
   const statement_string = fs.readFileSync(statement_path, 'utf8');
   const statement_json = JSON.parse(statement_string);
 
-  const XAPI_TO_KTBS_MODEL_PATH = '../resources/xapi-ktbs-model.ttl';
+  const XAPI_TO_KTBS_MODEL_PATH = './resources/xapi-ktbs-model.ttl';
   const model = fs.readFileSync(XAPI_TO_KTBS_MODEL_PATH, 'utf8');
 
   Promise.all([
